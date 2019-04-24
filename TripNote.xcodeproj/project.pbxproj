@@ -7,14 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		230C15362270B81700380009 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230C15352270B81700380009 /* UITextFieldExtension.swift */; };
+		239D032B226DABD90025BD7A /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239D032A226DABD90025BD7A /* UIButtonExtension.swift */; };
+		239D032D226DAC8E0025BD7A /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239D032C226DAC8E0025BD7A /* UIViewExtension.swift */; };
+		239D0331226DB2FB0025BD7A /* TripViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239D0330226DB2FB0025BD7A /* TripViewModel.swift */; };
+		239D0334226DB7670025BD7A /* AddTripViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 239D0333226DB7670025BD7A /* AddTripViewController.storyboard */; };
+		239D0336226DB7880025BD7A /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239D0335226DB7880025BD7A /* AddTripViewController.swift */; };
+		23A9F3B62269AA0C0067D1BA /* TripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A9F3B52269AA0C0067D1BA /* TripTableViewCell.swift */; };
+		23A9F3B92269B23A0067D1BA /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A9F3B82269B23A0067D1BA /* Theme.swift */; };
+		23A9F3BD2269C4B70067D1BA /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23A9F3BC2269C4B70067D1BA /* Quicksand-Medium.ttf */; };
+		23A9F3BF2269C4D30067D1BA /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23A9F3BE2269C4D30067D1BA /* Quicksand-Bold.ttf */; };
+		23A9F3C12269C6CC0067D1BA /* fugaz-one.regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23A9F3C02269C6CC0067D1BA /* fugaz-one.regular.ttf */; };
 		23C397A1226980F8001C022E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C397A0226980F8001C022E /* AppDelegate.swift */; };
 		23C397A3226980F8001C022E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C397A2226980F8001C022E /* ViewController.swift */; };
 		23C397A6226980F8001C022E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23C397A4226980F8001C022E /* Main.storyboard */; };
 		23C397A8226980FA001C022E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23C397A7226980FA001C022E /* Assets.xcassets */; };
 		23C397AB226980FA001C022E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23C397A9226980FA001C022E /* LaunchScreen.storyboard */; };
+		23C397B522698258001C022E /* TripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C397B422698258001C022E /* TripModel.swift */; };
+		23C397B72269836F001C022E /* TripFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C397B62269836F001C022E /* TripFunctions.swift */; };
+		23C397BF22698A35001C022E /* TripViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23C397BE22698A35001C022E /* TripViewController.storyboard */; };
+		23C397C122698A4F001C022E /* TripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C397C022698A4F001C022E /* TripViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		230C15352270B81700380009 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
+		239D032A226DABD90025BD7A /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		239D032C226DAC8E0025BD7A /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		239D0330226DB2FB0025BD7A /* TripViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewModel.swift; sourceTree = "<group>"; };
+		239D0333226DB7670025BD7A /* AddTripViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddTripViewController.storyboard; sourceTree = "<group>"; };
+		239D0335226DB7880025BD7A /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
+		23A9F3B52269AA0C0067D1BA /* TripTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewCell.swift; sourceTree = "<group>"; };
+		23A9F3B82269B23A0067D1BA /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		23A9F3BC2269C4B70067D1BA /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Medium.ttf"; sourceTree = "<group>"; };
+		23A9F3BE2269C4D30067D1BA /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
+		23A9F3C02269C6CC0067D1BA /* fugaz-one.regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fugaz-one.regular.ttf"; sourceTree = "<group>"; };
 		23C3979D226980F8001C022E /* TripNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23C397A0226980F8001C022E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23C397A2226980F8001C022E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +48,10 @@
 		23C397A7226980FA001C022E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23C397AA226980FA001C022E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23C397AC226980FA001C022E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23C397B422698258001C022E /* TripModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModel.swift; sourceTree = "<group>"; };
+		23C397B62269836F001C022E /* TripFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripFunctions.swift; sourceTree = "<group>"; };
+		23C397BE22698A35001C022E /* TripViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TripViewController.storyboard; sourceTree = "<group>"; };
+		23C397C022698A4F001C022E /* TripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +65,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		239D0326226DAB640025BD7A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				239D032A226DABD90025BD7A /* UIButtonExtension.swift */,
+				239D032C226DAC8E0025BD7A /* UIViewExtension.swift */,
+				230C15352270B81700380009 /* UITextFieldExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		239D032E226DB2AD0025BD7A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				239D032F226DB2CA0025BD7A /* Trip */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		239D032F226DB2CA0025BD7A /* Trip */ = {
+			isa = PBXGroup;
+			children = (
+				239D0330226DB2FB0025BD7A /* TripViewModel.swift */,
+			);
+			path = Trip;
+			sourceTree = "<group>";
+		};
+		239D0332226DB5EF0025BD7A /* AddTripViewController */ = {
+			isa = PBXGroup;
+			children = (
+				239D0333226DB7670025BD7A /* AddTripViewController.storyboard */,
+				239D0335226DB7880025BD7A /* AddTripViewController.swift */,
+			);
+			path = AddTripViewController;
+			sourceTree = "<group>";
+		};
+		23A9F3B72269B21F0067D1BA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				23A9F3C02269C6CC0067D1BA /* fugaz-one.regular.ttf */,
+				23A9F3BE2269C4D30067D1BA /* Quicksand-Bold.ttf */,
+				23A9F3BC2269C4B70067D1BA /* Quicksand-Medium.ttf */,
+				23A9F3B82269B23A0067D1BA /* Theme.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		23C39794226980F8001C022E = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +130,11 @@
 		23C3979F226980F8001C022E /* TripNote */ = {
 			isa = PBXGroup;
 			children = (
+				239D0326226DAB640025BD7A /* Extensions */,
+				23A9F3B72269B21F0067D1BA /* Resources */,
+				23C397B222698110001C022E /* Models */,
+				23C397B822698951001C022E /* Views */,
+				239D032E226DB2AD0025BD7A /* ViewModel */,
 				23C397A0226980F8001C022E /* AppDelegate.swift */,
 				23C397A2226980F8001C022E /* ViewController.swift */,
 				23C397A4226980F8001C022E /* Main.storyboard */,
@@ -62,6 +143,42 @@
 				23C397AC226980FA001C022E /* Info.plist */,
 			);
 			path = TripNote;
+			sourceTree = "<group>";
+		};
+		23C397B222698110001C022E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				23C397B322698134001C022E /* Trip */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		23C397B322698134001C022E /* Trip */ = {
+			isa = PBXGroup;
+			children = (
+				23C397B422698258001C022E /* TripModel.swift */,
+				23C397B62269836F001C022E /* TripFunctions.swift */,
+			);
+			path = Trip;
+			sourceTree = "<group>";
+		};
+		23C397B822698951001C022E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				239D0332226DB5EF0025BD7A /* AddTripViewController */,
+				23C397B922698966001C022E /* TripViewController */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		23C397B922698966001C022E /* TripViewController */ = {
+			isa = PBXGroup;
+			children = (
+				23C397BE22698A35001C022E /* TripViewController.storyboard */,
+				23C397C022698A4F001C022E /* TripViewController.swift */,
+				23A9F3B52269AA0C0067D1BA /* TripTableViewCell.swift */,
+			);
+			path = TripViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +213,7 @@
 				TargetAttributes = {
 					23C3979C226980F8001C022E = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -122,9 +240,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23A9F3BF2269C4D30067D1BA /* Quicksand-Bold.ttf in Resources */,
 				23C397AB226980FA001C022E /* LaunchScreen.storyboard in Resources */,
 				23C397A8226980FA001C022E /* Assets.xcassets in Resources */,
+				23C397BF22698A35001C022E /* TripViewController.storyboard in Resources */,
+				239D0334226DB7670025BD7A /* AddTripViewController.storyboard in Resources */,
 				23C397A6226980F8001C022E /* Main.storyboard in Resources */,
+				23A9F3BD2269C4B70067D1BA /* Quicksand-Medium.ttf in Resources */,
+				23A9F3C12269C6CC0067D1BA /* fugaz-one.regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,8 +258,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23A9F3B62269AA0C0067D1BA /* TripTableViewCell.swift in Sources */,
+				230C15362270B81700380009 /* UITextFieldExtension.swift in Sources */,
+				239D032B226DABD90025BD7A /* UIButtonExtension.swift in Sources */,
 				23C397A3226980F8001C022E /* ViewController.swift in Sources */,
+				23C397C122698A4F001C022E /* TripViewController.swift in Sources */,
 				23C397A1226980F8001C022E /* AppDelegate.swift in Sources */,
+				239D0331226DB2FB0025BD7A /* TripViewModel.swift in Sources */,
+				23C397B72269836F001C022E /* TripFunctions.swift in Sources */,
+				239D0336226DB7880025BD7A /* AddTripViewController.swift in Sources */,
+				239D032D226DAC8E0025BD7A /* UIViewExtension.swift in Sources */,
+				23C397B522698258001C022E /* TripModel.swift in Sources */,
+				23A9F3B92269B23A0067D1BA /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +415,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BNSLJ8LFRL;
 				INFOPLIST_FILE = TripNote/Info.plist;
@@ -291,6 +425,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ant.TripNote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -300,6 +435,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BNSLJ8LFRL;
 				INFOPLIST_FILE = TripNote/Info.plist;
