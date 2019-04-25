@@ -7,8 +7,10 @@
 //
 
 import Foundation
+import RealmSwift
 
 class TripFunctions {
+    var realm = try! Realm()
     static func createTrip(tripModel : TripModel){
         
     }

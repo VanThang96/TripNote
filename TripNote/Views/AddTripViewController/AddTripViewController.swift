@@ -16,6 +16,9 @@ class AddTripViewController: UIViewController {
     @IBOutlet weak var btnSave: UIButton!
     @IBOutlet weak var txtAddTrip: UITextField!
     
+    // MARK : var
+    var doneSaving : (()->())?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,6 +31,10 @@ class AddTripViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     @IBAction func Save(_ sender: Any) {
+        if let doneSaving = doneSaving {
+            doneSaving()
+        }
+        dismiss(animated: true, completion: nil)
     }
     fileprivate func firstSetupView(){
         cardView.borderForView()

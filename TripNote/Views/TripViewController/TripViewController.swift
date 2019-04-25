@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SQLite3
 
 class TripViewController: UIViewController {
 
@@ -17,7 +17,7 @@ class TripViewController: UIViewController {
     
     // MARK : let
     let cellId = "cellId"
-    
+    fileprivate let  segueAddTrip = "toAddTripsegue"
     // MARK : var
     var tripViewModel : TripViewModel!
     
@@ -30,6 +30,14 @@ class TripViewController: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         tripViewModel = TripViewModel()
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == segueAddTrip {
+            let popup = segue.destination as! AddTripViewController
+            popup.doneSaving = { [weak self] in
+                self?.tableView.reloadData()
+            }
+        }
     }
 }
 // MARK : TableViewDataSource

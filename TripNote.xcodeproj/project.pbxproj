@@ -27,9 +27,11 @@
 		23C397B72269836F001C022E /* TripFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C397B62269836F001C022E /* TripFunctions.swift */; };
 		23C397BF22698A35001C022E /* TripViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23C397BE22698A35001C022E /* TripViewController.storyboard */; };
 		23C397C122698A4F001C022E /* TripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C397C022698A4F001C022E /* TripViewController.swift */; };
+		66905D4E6699716F2780E6E9 /* Pods_TripNote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8AE27883216DD8E0E7BE0D /* Pods_TripNote.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C66CFE4AD77D2EC4C8F3954 /* Pods-TripNote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripNote.release.xcconfig"; path = "Target Support Files/Pods-TripNote/Pods-TripNote.release.xcconfig"; sourceTree = "<group>"; };
 		230C15352270B81700380009 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		239D032A226DABD90025BD7A /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		239D032C226DAC8E0025BD7A /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
@@ -52,6 +54,8 @@
 		23C397B62269836F001C022E /* TripFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripFunctions.swift; sourceTree = "<group>"; };
 		23C397BE22698A35001C022E /* TripViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TripViewController.storyboard; sourceTree = "<group>"; };
 		23C397C022698A4F001C022E /* TripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewController.swift; sourceTree = "<group>"; };
+		5D8AE27883216DD8E0E7BE0D /* Pods_TripNote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TripNote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2F46A6540EF3E886F2B8C5A /* Pods-TripNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripNote.debug.xcconfig"; path = "Target Support Files/Pods-TripNote/Pods-TripNote.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66905D4E6699716F2780E6E9 /* Pods_TripNote.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +121,8 @@
 			children = (
 				23C3979F226980F8001C022E /* TripNote */,
 				23C3979E226980F8001C022E /* Products */,
+				3D6045E0B89880F83ED01A96 /* Pods */,
+				9CFB67C16E0710B1A3111627 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -181,6 +188,24 @@
 			path = TripViewController;
 			sourceTree = "<group>";
 		};
+		3D6045E0B89880F83ED01A96 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B2F46A6540EF3E886F2B8C5A /* Pods-TripNote.debug.xcconfig */,
+				0C66CFE4AD77D2EC4C8F3954 /* Pods-TripNote.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9CFB67C16E0710B1A3111627 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D8AE27883216DD8E0E7BE0D /* Pods_TripNote.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -188,9 +213,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 23C397AF226980FA001C022E /* Build configuration list for PBXNativeTarget "TripNote" */;
 			buildPhases = (
+				2BE16BBB0E6E822BB48B7594 /* [CP] Check Pods Manifest.lock */,
 				23C39799226980F8001C022E /* Sources */,
 				23C3979A226980F8001C022E /* Frameworks */,
 				23C3979B226980F8001C022E /* Resources */,
+				0BADCD355F9CEA10AA588E5B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -252,6 +279,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0BADCD355F9CEA10AA588E5B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TripNote/Pods-TripNote-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TripNote/Pods-TripNote-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2BE16BBB0E6E822BB48B7594 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TripNote-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		23C39799226980F8001C022E /* Sources */ = {
@@ -413,6 +489,7 @@
 		};
 		23C397B0226980FA001C022E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2F46A6540EF3E886F2B8C5A /* Pods-TripNote.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -433,6 +510,7 @@
 		};
 		23C397B1226980FA001C022E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C66CFE4AD77D2EC4C8F3954 /* Pods-TripNote.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

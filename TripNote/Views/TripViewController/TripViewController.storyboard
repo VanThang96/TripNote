@@ -67,7 +67,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <state key="normal" image="baseline_add_white_36pt_1x"/>
                                 <connections>
-                                    <segue destination="AtM-Kg-Kil" kind="presentation" id="Hix-gf-qvc"/>
+                                    <segue destination="AtM-Kg-Kil" kind="presentation" identifier="toAddTripsegue" id="Hix-gf-qvc"/>
                                 </connections>
                             </button>
                         </subviews>

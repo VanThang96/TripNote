@@ -7,12 +7,18 @@
 //
 
 import Foundation
+import RealmSwift
 
-class TripModel {
-    let id : UUID!
-    var title : String!
-    init(title : String) {
+class TripModel : Object {
+    @objc dynamic var id : UUID!
+    @objc dynamic var title : String!
+    
+    convenience init(title : String) {
+        self.init()
         self.id = UUID()
         self.title = title
+    }
+    override static func primaryKey() -> String? {
+        return "id"
     }
 }
