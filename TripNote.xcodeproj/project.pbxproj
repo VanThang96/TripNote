@@ -24,7 +24,6 @@
 		23C397A8226980FA001C022E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23C397A7226980FA001C022E /* Assets.xcassets */; };
 		23C397AB226980FA001C022E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23C397A9226980FA001C022E /* LaunchScreen.storyboard */; };
 		23C397B522698258001C022E /* TripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C397B422698258001C022E /* TripModel.swift */; };
-		23C397B72269836F001C022E /* TripFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C397B62269836F001C022E /* TripFunctions.swift */; };
 		23C397BF22698A35001C022E /* TripViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23C397BE22698A35001C022E /* TripViewController.storyboard */; };
 		23C397C122698A4F001C022E /* TripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C397C022698A4F001C022E /* TripViewController.swift */; };
 		66905D4E6699716F2780E6E9 /* Pods_TripNote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8AE27883216DD8E0E7BE0D /* Pods_TripNote.framework */; };
@@ -51,7 +50,6 @@
 		23C397AA226980FA001C022E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23C397AC226980FA001C022E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23C397B422698258001C022E /* TripModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModel.swift; sourceTree = "<group>"; };
-		23C397B62269836F001C022E /* TripFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripFunctions.swift; sourceTree = "<group>"; };
 		23C397BE22698A35001C022E /* TripViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TripViewController.storyboard; sourceTree = "<group>"; };
 		23C397C022698A4F001C022E /* TripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewController.swift; sourceTree = "<group>"; };
 		5D8AE27883216DD8E0E7BE0D /* Pods_TripNote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TripNote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,7 +162,6 @@
 			isa = PBXGroup;
 			children = (
 				23C397B422698258001C022E /* TripModel.swift */,
-				23C397B62269836F001C022E /* TripFunctions.swift */,
 			);
 			path = Trip;
 			sourceTree = "<group>";
@@ -194,7 +191,6 @@
 				B2F46A6540EF3E886F2B8C5A /* Pods-TripNote.debug.xcconfig */,
 				0C66CFE4AD77D2EC4C8F3954 /* Pods-TripNote.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -341,7 +337,6 @@
 				23C397C122698A4F001C022E /* TripViewController.swift in Sources */,
 				23C397A1226980F8001C022E /* AppDelegate.swift in Sources */,
 				239D0331226DB2FB0025BD7A /* TripViewModel.swift in Sources */,
-				23C397B72269836F001C022E /* TripFunctions.swift in Sources */,
 				239D0336226DB7880025BD7A /* AddTripViewController.swift in Sources */,
 				239D032D226DAC8E0025BD7A /* UIViewExtension.swift in Sources */,
 				23C397B522698258001C022E /* TripModel.swift in Sources */,

@@ -24,12 +24,13 @@ class TripViewController: UIViewController {
     //MARK : Method
     override func viewDidLoad() {
         super.viewDidLoad()
+        tripViewModel = TripViewModel()
         
         addButton.createFloatingActionButton()
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        tripViewModel = TripViewModel()
+        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == segueAddTrip {

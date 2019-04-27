@@ -10,12 +10,12 @@ import Foundation
 import RealmSwift
 
 class TripModel : Object {
-    @objc dynamic var id : UUID!
+    @objc dynamic var id : String!
     @objc dynamic var title : String!
     
     convenience init(title : String) {
         self.init()
-        self.id = UUID()
+        self.id = UUID().uuidString
         self.title = title
     }
     override static func primaryKey() -> String? {

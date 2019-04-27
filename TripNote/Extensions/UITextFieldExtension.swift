@@ -15,4 +15,15 @@ extension  UITextField {
         layer.shadowRadius = 2
         layer.shadowOffset = CGSize(width: 0, height: 4)
     }
+    func addInvalidImage(){
+        let imvInvalid = UIImageView()
+        imvInvalid.frame = CGRect(x: 0, y: 0, width: 32, height: 24)
+        imvInvalid.image = UIImage(named: "warning")
+        imvInvalid.contentMode = .scaleAspectFit
+        
+    
+        rightView = imvInvalid
+        rightViewMode = .always
+        
+    }
 }

@@ -7,16 +7,28 @@
 //
 
 import Foundation
+import RealmSwift
+
 class TripViewModel {
-    var trips = [
-        TripModel(title: "Trip to London"),
-        TripModel(title: "Trip to Paris"),
-        TripModel(title: "Trip to Tokyo"),
-        TripModel(title: "Trip to Dubai"),
-        TripModel(title: "Trip to Bangkok")
-    ]
+    
+    var realm = try! Realm()
+    lazy var trips : Results<TripModel> = { [weak self] in
+        self!.realm.objects(TripModel.self)
+    }()
+//    var trips = [
+//        TripModel(title: "Trip to London"),
+//        TripModel(title: "Trip to Paris"),
+//        TripModel(title: "Trip to Tokyo"),
+//        TripModel(title: "Trip to Dubai"),
+//        TripModel(title: "Trip to Bangkok")
+//    ]
+    func addTrip(trip : TripModel){
+        try! realm.write {
+            realm.add(trip)
+        }
+    }
     func getTrips() -> [TripModel] {
-        return trips
+        return trips.map{$0}
     }
     func getTrip(atIndex : Int) -> TripModel {
         return trips[atIndex]

@@ -18,10 +18,12 @@ class AddTripViewController: UIViewController {
     
     // MARK : var
     var doneSaving : (()->())?
+    var tripViewModel : TripViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        tripViewModel = TripViewModel()
         // Do any additional setup after loading the view.
         firstSetupView()
     }
@@ -31,7 +33,16 @@ class AddTripViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     @IBAction func Save(_ sender: Any) {
+        
+        // check new Trip Name valid
+        guard txtAddTrip.text != "" , let newTripName = txtAddTrip.text else {
+            txtAddTrip.addInvalidImage()
+            return
+        }
+        
         if let doneSaving = doneSaving {
+            let trip = TripModel(title: newTripName)
+            tripViewModel.addTrip(trip: trip)
             doneSaving()
         }
         dismiss(animated: true, completion: nil)
