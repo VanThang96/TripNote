@@ -7,14 +7,16 @@
 //
 
 import UIKit
+import Photos
 
 class AddTripViewController: UIViewController {
-
+    
     // MARK : IBOutlet
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var btnCancel: UIButton!
     @IBOutlet weak var btnSave: UIButton!
     @IBOutlet weak var txtAddTrip: UITextField!
+    @IBOutlet weak var imvPhotoTrip: UIImageView!
     
     // MARK : var
     var doneSaving : (()->())?
@@ -24,6 +26,8 @@ class AddTripViewController: UIViewController {
         super.viewDidLoad()
         
         tripViewModel = TripViewModel()
+        imvPhotoTrip.layer.cornerRadius = 10
+        imvPhotoTrip.clipsToBounds = true
         // Do any additional setup after loading the view.
         firstSetupView()
     }
@@ -41,11 +45,54 @@ class AddTripViewController: UIViewController {
         }
         
         if let doneSaving = doneSaving {
-            let trip = TripModel(title: newTripName)
-            tripViewModel.addTrip(trip: trip)
+            if imvPhotoTrip.image == nil  {
+                let trip = TripModel(title: newTripName)
+                tripViewModel.addTrip(trip: trip)
+            } else {
+                let trip = TripModel(title: newTripName, image: imvPhotoTrip.image)
+                tripViewModel.addTrip(trip: trip)}
             doneSaving()
         }
         dismiss(animated: true, completion: nil)
+    }
+    @IBAction func addPhoto(_ sender: Any) {
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            PHPhotoLibrary.requestAuthorization { [unowned self](status) in
+                switch status {
+                case .authorized:
+                    self.handleImagePickerAuthorized()
+                case .notDetermined:
+                    if status == PHAuthorizationStatus.authorized {
+                        self.handleImagePickerAuthorized()
+                    }
+                case .restricted :
+                    let alert = UIAlertController(title: "Photo Library Restricted", message: "Photo library access is restricted and cannot be accessed", preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    alert.addAction(okAction)
+                    self.present(alert, animated: true, completion: nil)
+                case .denied :
+                    let alert = UIAlertController(title: "Photo Library Access Denied", message: "Photo library access was previously denied. Please update your Settings if you wish to change this", preferredStyle: .alert)
+                    let gotoSettingAction = UIAlertAction(title: "Go to Settings", style: .default, handler: { (action) in
+                        DispatchQueue.main.async {
+                            if let url = URL(string: UIApplication.openSettingsURLString) {
+                                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                            }
+                        }
+                    })
+                    let cancelAction = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
+                    alert.addAction(gotoSettingAction)
+                    alert.addAction(cancelAction)
+                    self.present(alert, animated: true, completion: nil)
+                }
+            }
+        }
+        
+    }
+    fileprivate func handleImagePickerAuthorized(){
+        let myImagePickerController = UIImagePickerController()
+        myImagePickerController.sourceType = .photoLibrary
+        myImagePickerController.delegate = self
+        self.present(myImagePickerController, animated: true, completion: nil)
     }
     fileprivate func firstSetupView(){
         cardView.borderForView()
@@ -60,5 +107,16 @@ extension AddTripViewController:  UITextFieldDelegate{
             textField.resignFirstResponder()
         }
         return true
+    }
+}
+extension AddTripViewController : UIImagePickerControllerDelegate , UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            imvPhotoTrip.image = image
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
     }
 }
