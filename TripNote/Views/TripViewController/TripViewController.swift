@@ -14,17 +14,22 @@ class TripViewController: UIViewController {
     // MARK : IBOutlet
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addButton: UIButton!
+    @IBOutlet var helpView: UIVisualEffectView!
+    @IBOutlet weak var btnCloseHelpView: UIButton!
     
     // MARK : let
     let cellId = "cellId"
     fileprivate let  segueAddTrip = "toAddTripsegue"
+    let seenHelpView = "seenHelpView"
+    
     // MARK : var
     var tripViewModel : TripViewModel!
     var tripIndexToEdit : Int?
     
-    //MARK : Method
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tripViewModel = TripViewModel()
         
         addButton.createFloatingActionButton()
@@ -32,7 +37,19 @@ class TripViewController: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
+        setupHelpView()
     }
+    // MARK : IBAction
+    @IBAction func closeHelpView(_ sender: Any) {
+        UIView.animate(withDuration: 0.5, animations: {[weak self] in
+            self!.helpView.alpha = 0
+        }) { [weak self](bool) in
+            self!.helpView.removeFromSuperview()
+            UserDefaults.standard.set(true, forKey: self!.seenHelpView)
+        }
+    }
+    
+    //MARK : Method
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == segueAddTrip {
             let popup = segue.destination as! AddTripViewController
@@ -40,6 +57,17 @@ class TripViewController: UIViewController {
             popup.doneSaving = { [weak self] in
                 self?.tableView.reloadData()
             }
+            tripIndexToEdit = nil
+        }
+    }
+    fileprivate func setupHelpView(){
+        guard tripViewModel.getCount() > 0 else {
+            return
+        }
+        if UserDefaults.standard.bool(forKey: seenHelpView) == false {
+            btnCloseHelpView.layer.cornerRadius = btnCloseHelpView.frame.height / 2
+            helpView.frame = view.frame
+            view.addSubview(helpView)
         }
     }
 }
