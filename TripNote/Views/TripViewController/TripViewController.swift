@@ -20,6 +20,7 @@ class TripViewController: UIViewController {
     fileprivate let  segueAddTrip = "toAddTripsegue"
     // MARK : var
     var tripViewModel : TripViewModel!
+    var tripIndexToEdit : Int?
     
     //MARK : Method
     override func viewDidLoad() {
@@ -35,6 +36,7 @@ class TripViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == segueAddTrip {
             let popup = segue.destination as! AddTripViewController
+            popup.tripIndexToEdit = self.tripIndexToEdit
             popup.doneSaving = { [weak self] in
                 self?.tableView.reloadData()
             }
@@ -76,5 +78,15 @@ extension TripViewController : UITableViewDelegate{
         }
         delete.image = UIImage(named: "delete")
         return UISwipeActionsConfiguration(actions: [delete])
+    }
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let edit = UIContextualAction(style: .normal, title: "Edit") { [weak self](contextualAction, view, actionPerform : (Bool) -> Void) in
+            self?.tripIndexToEdit = indexPath.row
+            self?.performSegue(withIdentifier: self!.segueAddTrip, sender: nil)
+            actionPerform(true)
+        }
+        edit.image = UIImage(named: "edit")
+        edit.backgroundColor = .blue
+        return UISwipeActionsConfiguration(actions: [edit])
     }
 }

@@ -24,7 +24,7 @@ class TripViewModel {
 //    ]
     func addTrip(trip : TripModel){
         try! realm.write {
-            realm.add(trip)
+            realm.add(trip, update: false)
         }
     }
     func getTrips() -> [TripModel] {
@@ -39,6 +39,11 @@ class TripViewModel {
     func deleteTrip(tripModel : TripModel){
         try! realm.write {
             realm.delete(tripModel)
+        }
+    }
+    func updateTrip(tripModel : TripModel){
+        try! realm.write {
+            realm.add(tripModel, update: true)
         }
     }
 }

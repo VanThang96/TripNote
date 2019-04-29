@@ -21,6 +21,7 @@ class AddTripViewController: UIViewController {
     // MARK : var
     var doneSaving : (()->())?
     var tripViewModel : TripViewModel!
+    var tripIndexToEdit : Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,14 @@ class AddTripViewController: UIViewController {
         imvPhotoTrip.clipsToBounds = true
         // Do any additional setup after loading the view.
         firstSetupView()
+        
+        if let index = tripIndexToEdit {
+            let trip = tripViewModel.getTrip(atIndex: index)
+            txtAddTrip.text = trip.title
+            if trip.image != nil {
+                imvPhotoTrip.image = UIImage(data: trip.image!)
+            }
+        }
     }
     
     // MARK : IBAction
@@ -44,13 +53,27 @@ class AddTripViewController: UIViewController {
             return
         }
         
-        if let doneSaving = doneSaving {
+        if let index = tripIndexToEdit { // case edit
+            let trip = tripViewModel.getTrip(atIndex: index)
+            let id = trip.id
+            if imvPhotoTrip.image == nil  {
+                let trip = TripModel(title: newTripName)
+                trip.id = id
+                tripViewModel.updateTrip(tripModel: trip)
+            } else {
+                let trip = TripModel(title: newTripName, image: imvPhotoTrip.image)
+                trip.id = id
+                tripViewModel.updateTrip(tripModel: trip)
+            }
+        }else {                     //case add
             if imvPhotoTrip.image == nil  {
                 let trip = TripModel(title: newTripName)
                 tripViewModel.addTrip(trip: trip)
             } else {
                 let trip = TripModel(title: newTripName, image: imvPhotoTrip.image)
                 tripViewModel.addTrip(trip: trip)}
+        }
+        if let doneSaving = doneSaving {
             doneSaving()
         }
         dismiss(animated: true, completion: nil)
