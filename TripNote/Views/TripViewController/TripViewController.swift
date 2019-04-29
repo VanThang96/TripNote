@@ -10,7 +10,7 @@ import UIKit
 import SQLite3
 
 class TripViewController: UIViewController {
-
+    
     // MARK : IBOutlet
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addButton: UIButton!
@@ -56,6 +56,25 @@ extension TripViewController : UITableViewDataSource {
 // MARK : TableViewDelegate
 extension TripViewController : UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 160
+        return 200
+    }
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let delete = UIContextualAction(style: .destructive, title: "Delete") { [weak self](contextualAction, view, actionPerForm : @escaping (Bool) -> Void) in
+            let alert = UIAlertController(title: "Delete Trip", message: "Are you sure you want to delete trip ?", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
+                actionPerForm(false)
+            }))
+            alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { [weak self](action) in
+                // Perforn delete
+                if let trip = self?.tripViewModel.getTrip(atIndex: indexPath.row){
+                    self?.tripViewModel.deleteTrip(tripModel: trip)
+                }
+                tableView.deleteRows(at: [indexPath], with: .automatic)
+                actionPerForm(true)
+            }))
+            self?.present(alert, animated: true, completion: nil)
+        }
+        delete.image = UIImage(named: "delete")
+        return UISwipeActionsConfiguration(actions: [delete])
     }
 }

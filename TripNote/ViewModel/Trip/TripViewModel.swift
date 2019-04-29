@@ -36,4 +36,9 @@ class TripViewModel {
     func getCount() -> Int {
         return trips.count
     }
+    func deleteTrip(tripModel : TripModel){
+        try! realm.write {
+            realm.delete(tripModel)
+        }
+    }
 }

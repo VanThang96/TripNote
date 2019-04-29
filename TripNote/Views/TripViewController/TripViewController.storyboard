@@ -26,22 +26,21 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cellId" rowHeight="160" id="CSa-uj-nZq" customClass="TripTableViewCell" customModule="TripNote" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="160"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cellId" rowHeight="200" id="CSa-uj-nZq" customClass="TripTableViewCell" customModule="TripNote" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CSa-uj-nZq" id="qvr-vo-cci">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Maf-Lf-4Mc">
-                                                    <rect key="frame" x="16" y="16" width="343" height="127.5"/>
+                                                    <rect key="frame" x="16" y="16" width="343" height="168"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M56-sh-7gz">
-                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="127.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="168"/>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trip to London" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Vp-hG-JPn">
-                                                            <rect key="frame" x="0.0" y="18" width="343" height="91"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trip to London" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Vp-hG-JPn">
+                                                            <rect key="frame" x="0.0" y="57.5" width="343" height="53"/>
                                                             <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="36"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -52,6 +51,9 @@
                                                         <constraint firstItem="M56-sh-7gz" firstAttribute="top" secondItem="Maf-Lf-4Mc" secondAttribute="top" id="3Ch-BK-fNX"/>
                                                         <constraint firstAttribute="bottom" secondItem="M56-sh-7gz" secondAttribute="bottom" id="5wn-Cb-e8d"/>
                                                         <constraint firstAttribute="trailing" secondItem="M56-sh-7gz" secondAttribute="trailing" id="BCt-nS-zrB"/>
+                                                        <constraint firstAttribute="trailing" secondItem="5Vp-hG-JPn" secondAttribute="trailing" id="FTb-FT-lVu"/>
+                                                        <constraint firstItem="5Vp-hG-JPn" firstAttribute="centerY" secondItem="Maf-Lf-4Mc" secondAttribute="centerY" id="Rfb-Yb-NQg"/>
+                                                        <constraint firstItem="5Vp-hG-JPn" firstAttribute="leading" secondItem="M56-sh-7gz" secondAttribute="leading" id="gtm-nd-8Hr"/>
                                                         <constraint firstItem="M56-sh-7gz" firstAttribute="leading" secondItem="Maf-Lf-4Mc" secondAttribute="leading" id="sJJ-zp-S7D"/>
                                                     </constraints>
                                                 </view>
