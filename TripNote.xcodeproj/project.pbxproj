@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		230C15362270B81700380009 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230C15352270B81700380009 /* UITextFieldExtension.swift */; };
+		23408DB8227949B900B2DF17 /* ActivitiesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23408DB7227949B900B2DF17 /* ActivitiesViewController.storyboard */; };
+		23408DBA227949FA00B2DF17 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23408DB9227949FA00B2DF17 /* ActivitiesViewController.swift */; };
+		23408DBD2279579600B2DF17 /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23408DBC2279579600B2DF17 /* DayModel.swift */; };
 		239D032B226DABD90025BD7A /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239D032A226DABD90025BD7A /* UIButtonExtension.swift */; };
 		239D032D226DAC8E0025BD7A /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239D032C226DAC8E0025BD7A /* UIViewExtension.swift */; };
 		239D0331226DB2FB0025BD7A /* TripViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239D0330226DB2FB0025BD7A /* TripViewModel.swift */; };
@@ -26,12 +29,16 @@
 		23C397B522698258001C022E /* TripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C397B422698258001C022E /* TripModel.swift */; };
 		23C397BF22698A35001C022E /* TripViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23C397BE22698A35001C022E /* TripViewController.storyboard */; };
 		23C397C122698A4F001C022E /* TripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C397C022698A4F001C022E /* TripViewController.swift */; };
+		23C7525B22796A41001393CD /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C7525A22796A41001393CD /* ActivityModel.swift */; };
 		66905D4E6699716F2780E6E9 /* Pods_TripNote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8AE27883216DD8E0E7BE0D /* Pods_TripNote.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0C66CFE4AD77D2EC4C8F3954 /* Pods-TripNote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripNote.release.xcconfig"; path = "Target Support Files/Pods-TripNote/Pods-TripNote.release.xcconfig"; sourceTree = "<group>"; };
 		230C15352270B81700380009 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
+		23408DB7227949B900B2DF17 /* ActivitiesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ActivitiesViewController.storyboard; sourceTree = "<group>"; };
+		23408DB9227949FA00B2DF17 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
+		23408DBC2279579600B2DF17 /* DayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayModel.swift; sourceTree = "<group>"; };
 		239D032A226DABD90025BD7A /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		239D032C226DAC8E0025BD7A /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		239D0330226DB2FB0025BD7A /* TripViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewModel.swift; sourceTree = "<group>"; };
@@ -52,6 +59,7 @@
 		23C397B422698258001C022E /* TripModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModel.swift; sourceTree = "<group>"; };
 		23C397BE22698A35001C022E /* TripViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TripViewController.storyboard; sourceTree = "<group>"; };
 		23C397C022698A4F001C022E /* TripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewController.swift; sourceTree = "<group>"; };
+		23C7525A22796A41001393CD /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
 		5D8AE27883216DD8E0E7BE0D /* Pods_TripNote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TripNote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F46A6540EF3E886F2B8C5A /* Pods-TripNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripNote.debug.xcconfig"; path = "Target Support Files/Pods-TripNote/Pods-TripNote.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +76,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23408DB62279497A00B2DF17 /* ActivitiesviewController */ = {
+			isa = PBXGroup;
+			children = (
+				23408DB7227949B900B2DF17 /* ActivitiesViewController.storyboard */,
+				23408DB9227949FA00B2DF17 /* ActivitiesViewController.swift */,
+			);
+			path = ActivitiesviewController;
+			sourceTree = "<group>";
+		};
+		23408DBB227956F300B2DF17 /* Day */ = {
+			isa = PBXGroup;
+			children = (
+				23408DBC2279579600B2DF17 /* DayModel.swift */,
+			);
+			path = Day;
+			sourceTree = "<group>";
+		};
 		239D0326226DAB640025BD7A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +178,8 @@
 		23C397B222698110001C022E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				23C7525922796A2E001393CD /* Activity */,
+				23408DBB227956F300B2DF17 /* Day */,
 				23C397B322698134001C022E /* Trip */,
 			);
 			path = Models;
@@ -169,6 +196,7 @@
 		23C397B822698951001C022E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				23408DB62279497A00B2DF17 /* ActivitiesviewController */,
 				239D0332226DB5EF0025BD7A /* AddTripViewController */,
 				23C397B922698966001C022E /* TripViewController */,
 			);
@@ -183,6 +211,14 @@
 				23A9F3B52269AA0C0067D1BA /* TripTableViewCell.swift */,
 			);
 			path = TripViewController;
+			sourceTree = "<group>";
+		};
+		23C7525922796A2E001393CD /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				23C7525A22796A41001393CD /* ActivityModel.swift */,
+			);
+			path = Activity;
 			sourceTree = "<group>";
 		};
 		3D6045E0B89880F83ED01A96 /* Pods */ = {
@@ -271,6 +307,7 @@
 				23C397A6226980F8001C022E /* Main.storyboard in Resources */,
 				23A9F3BD2269C4B70067D1BA /* Quicksand-Medium.ttf in Resources */,
 				23A9F3C12269C6CC0067D1BA /* fugaz-one.regular.ttf in Resources */,
+				23408DB8227949B900B2DF17 /* ActivitiesViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23A9F3B62269AA0C0067D1BA /* TripTableViewCell.swift in Sources */,
+				23408DBA227949FA00B2DF17 /* ActivitiesViewController.swift in Sources */,
 				230C15362270B81700380009 /* UITextFieldExtension.swift in Sources */,
 				239D032B226DABD90025BD7A /* UIButtonExtension.swift in Sources */,
 				23C397A3226980F8001C022E /* ViewController.swift in Sources */,
@@ -338,8 +376,10 @@
 				23C397A1226980F8001C022E /* AppDelegate.swift in Sources */,
 				239D0331226DB2FB0025BD7A /* TripViewModel.swift in Sources */,
 				239D0336226DB7880025BD7A /* AddTripViewController.swift in Sources */,
+				23408DBD2279579600B2DF17 /* DayModel.swift in Sources */,
 				239D032D226DAC8E0025BD7A /* UIViewExtension.swift in Sources */,
 				23C397B522698258001C022E /* TripModel.swift in Sources */,
+				23C7525B22796A41001393CD /* ActivityModel.swift in Sources */,
 				23A9F3B92269B23A0067D1BA /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

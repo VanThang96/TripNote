@@ -46,4 +46,7 @@ class TripViewModel {
             realm.add(tripModel, update: true)
         }
     }
+    func getTripWithId(with Id : String) -> TripModel?{
+        return self.realm.objects(TripModel.self).first(where : { $0.id == Id})
+    }
 }

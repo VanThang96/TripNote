@@ -74,7 +74,8 @@
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pMQ-xD-J03">
-                                        <rect key="frame" x="295" y="16" width="24" height="24"/>
+                                        <rect key="frame" x="283" y="16" width="36" height="36"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" image="photo"/>
                                         <connections>
                                             <action selector="addPhoto:" destination="isJ-Ck-uOn" eventType="touchUpInside" id="Kbr-CT-NyX"/>
@@ -124,6 +125,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="photo" width="24" height="24"/>
+        <image name="photo" width="36" height="36"/>
     </resources>
 </document>

@@ -18,7 +18,8 @@ extension  UITextField {
     func addInvalidImage(){
         let imvInvalid = UIImageView()
         imvInvalid.frame = CGRect(x: 0, y: 0, width: 32, height: 24)
-        imvInvalid.image = UIImage(named: "warning")
+        imvInvalid.image = UIImage(named: "invalid")?.withRenderingMode(.alwaysTemplate)
+        imvInvalid.tintColor = UIColor(red: 237/255, green: 136/255, blue: 46/255, alpha: 1)
         imvInvalid.contentMode = .scaleAspectFit
         
     

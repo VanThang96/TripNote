@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KXu-Ak-wup">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Activities View Controller-->
+        <scene sceneID="rsI-Hc-v7y">
+            <objects>
+                <viewController storyboardIdentifier="ActivitiesViewController" id="KXu-Ak-wup" customClass="ActivitiesViewController" customModule="TripNote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kTa-Fj-dCy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="483-ko-2NV">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fEW-Dn-cg1">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="9KV-69-dkR">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9KV-69-dkR" id="wbd-C2-qAx">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="483-ko-2NV" firstAttribute="leading" secondItem="knS-Ay-uIH" secondAttribute="leading" id="C2O-8a-Giv"/>
+                            <constraint firstItem="knS-Ay-uIH" firstAttribute="trailing" secondItem="483-ko-2NV" secondAttribute="trailing" id="HY4-rx-VKq"/>
+                            <constraint firstItem="knS-Ay-uIH" firstAttribute="bottom" secondItem="483-ko-2NV" secondAttribute="bottom" id="Mjs-Hi-4bv"/>
+                            <constraint firstItem="knS-Ay-uIH" firstAttribute="bottom" secondItem="fEW-Dn-cg1" secondAttribute="bottom" id="bco-yg-ARY"/>
+                            <constraint firstItem="fEW-Dn-cg1" firstAttribute="top" secondItem="knS-Ay-uIH" secondAttribute="top" id="lSe-qa-srs"/>
+                            <constraint firstItem="knS-Ay-uIH" firstAttribute="trailing" secondItem="fEW-Dn-cg1" secondAttribute="trailing" id="lZm-Nu-kE6"/>
+                            <constraint firstItem="483-ko-2NV" firstAttribute="top" secondItem="knS-Ay-uIH" secondAttribute="top" id="rTa-VK-Rzp"/>
+                            <constraint firstItem="fEW-Dn-cg1" firstAttribute="leading" secondItem="knS-Ay-uIH" secondAttribute="leading" id="vTX-3Z-QzJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="knS-Ay-uIH"/>
+                    </view>
+                    <connections>
+                        <outlet property="imvBackground" destination="483-ko-2NV" id="gLw-Cm-Rwy"/>
+                        <outlet property="tbViewActivities" destination="fEW-Dn-cg1" id="y0v-Ef-Che"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cMO-MA-EYC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-102" y="61"/>
+        </scene>
+    </scenes>
+</document>

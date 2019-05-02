@@ -61,7 +61,7 @@ class AddTripViewController: UIViewController {
                 trip.id = id
                 tripViewModel.updateTrip(tripModel: trip)
             } else {
-                let trip = TripModel(title: newTripName, image: imvPhotoTrip.image)
+                let trip = TripModel(title: newTripName, image: imvPhotoTrip.image!)
                 trip.id = id
                 tripViewModel.updateTrip(tripModel: trip)
             }
@@ -70,7 +70,7 @@ class AddTripViewController: UIViewController {
                 let trip = TripModel(title: newTripName)
                 tripViewModel.addTrip(trip: trip)
             } else {
-                let trip = TripModel(title: newTripName, image: imvPhotoTrip.image)
+                let trip = TripModel(title: newTripName, image: imvPhotoTrip.image!)
                 tripViewModel.addTrip(trip: trip)}
         }
         if let doneSaving = doneSaving {

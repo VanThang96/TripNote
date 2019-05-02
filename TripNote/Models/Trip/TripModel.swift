@@ -13,9 +13,10 @@ import UIKit
 class TripModel : Object {
     @objc dynamic var id : String!
     @objc dynamic var title : String!
-    @objc dynamic var image : Data? = nil
+    @objc dynamic var image : Data!
+    let dayModels  = List<DayModel>()
     
-    convenience init(title : String , image : UIImage?) {
+    convenience init(title : String , image : UIImage) {
         self.init()
         self.id = UUID().uuidString
         self.title = title
@@ -29,8 +30,8 @@ class TripModel : Object {
     override static func primaryKey() -> String? {
         return "id"
     }
-    func convertImagetoData(withImage : UIImage?) -> Data?{
-        let imageToData = UIImage.jpegData(withImage!)
+    func convertImagetoData(withImage : UIImage) -> Data?{
+        let imageToData = UIImage.jpegData(withImage)
         return imageToData(0.5)
     }
 }
