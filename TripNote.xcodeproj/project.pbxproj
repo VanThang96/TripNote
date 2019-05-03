@@ -11,6 +11,8 @@
 		23408DB8227949B900B2DF17 /* ActivitiesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23408DB7227949B900B2DF17 /* ActivitiesViewController.storyboard */; };
 		23408DBA227949FA00B2DF17 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23408DB9227949FA00B2DF17 /* ActivitiesViewController.swift */; };
 		23408DBD2279579600B2DF17 /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23408DBC2279579600B2DF17 /* DayModel.swift */; };
+		235BFE10227CA76600DD6658 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235BFE0E227CA76600DD6658 /* HeaderView.swift */; };
+		235BFE11227CA76600DD6658 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 235BFE0F227CA76600DD6658 /* HeaderView.xib */; };
 		239D032B226DABD90025BD7A /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239D032A226DABD90025BD7A /* UIButtonExtension.swift */; };
 		239D032D226DAC8E0025BD7A /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239D032C226DAC8E0025BD7A /* UIViewExtension.swift */; };
 		239D0331226DB2FB0025BD7A /* TripViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239D0330226DB2FB0025BD7A /* TripViewModel.swift */; };
@@ -39,6 +41,8 @@
 		23408DB7227949B900B2DF17 /* ActivitiesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ActivitiesViewController.storyboard; sourceTree = "<group>"; };
 		23408DB9227949FA00B2DF17 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
 		23408DBC2279579600B2DF17 /* DayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayModel.swift; sourceTree = "<group>"; };
+		235BFE0E227CA76600DD6658 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		235BFE0F227CA76600DD6658 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		239D032A226DABD90025BD7A /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		239D032C226DAC8E0025BD7A /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		239D0330226DB2FB0025BD7A /* TripViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewModel.swift; sourceTree = "<group>"; };
@@ -81,6 +85,8 @@
 			children = (
 				23408DB7227949B900B2DF17 /* ActivitiesViewController.storyboard */,
 				23408DB9227949FA00B2DF17 /* ActivitiesViewController.swift */,
+				235BFE0E227CA76600DD6658 /* HeaderView.swift */,
+				235BFE0F227CA76600DD6658 /* HeaderView.xib */,
 			);
 			path = ActivitiesviewController;
 			sourceTree = "<group>";
@@ -300,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23A9F3BF2269C4D30067D1BA /* Quicksand-Bold.ttf in Resources */,
+				235BFE11227CA76600DD6658 /* HeaderView.xib in Resources */,
 				23C397AB226980FA001C022E /* LaunchScreen.storyboard in Resources */,
 				23C397A8226980FA001C022E /* Assets.xcassets in Resources */,
 				23C397BF22698A35001C022E /* TripViewController.storyboard in Resources */,
@@ -377,6 +384,7 @@
 				239D0331226DB2FB0025BD7A /* TripViewModel.swift in Sources */,
 				239D0336226DB7880025BD7A /* AddTripViewController.swift in Sources */,
 				23408DBD2279579600B2DF17 /* DayModel.swift in Sources */,
+				235BFE10227CA76600DD6658 /* HeaderView.swift in Sources */,
 				239D032D226DAC8E0025BD7A /* UIViewExtension.swift in Sources */,
 				23C397B522698258001C022E /* TripModel.swift in Sources */,
 				23C7525B22796A41001393CD /* ActivityModel.swift in Sources */,
