@@ -42,6 +42,8 @@ class ActivitiesViewController: UIViewController {
     fileprivate func setupTableView() {
         tbViewActivities.dataSource = self
         tbViewActivities.delegate = self
+        
+        tbViewActivities.register(UINib(nibName: "ActivityTableViewCell", bundle: nil), forCellReuseIdentifier: cellId)
     }
     
     override func viewDidLoad() {
@@ -55,31 +57,29 @@ class ActivitiesViewController: UIViewController {
 }
 extension ActivitiesViewController : UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath )
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath ) as! ActivityTableViewCell
+        cell.activity = ActivityModel(title: "Bali", subTitle: "trip to Bali", activityType: .excursion)
         return cell
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        let title =  tripModel.dayModels[section].title ?? ""
-//        let subTitle = tripModel.dayModels[section].subTitle ?? ""
-//        
-//        return "\(title) \(subTitle)"
-//    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 110
+    }
 }
 extension ActivitiesViewController : UITableViewDelegate{
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerCell = Bundle.main.loadNibNamed("HeaderView", owner: self, options: nil)?.first as! HeaderView
-        headerCell.lbTitle.text = "Title"
-        headerCell.lbSubTitle.text = "subTitle"
+        headerCell.lbTitle.text = "May 6"
+        headerCell.lbSubTitle.text = "Departure"
         return headerCell
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 44
+        return 50
     }
 }

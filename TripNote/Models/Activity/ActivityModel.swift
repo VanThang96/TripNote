@@ -32,6 +32,13 @@ class ActivityModel : Object {
         self.activityType = activityType.rawValue
         self.photo = convertImagetoData(withImage : photo)
     }
+    convenience init(title : String , subTitle : String , activityType : ActivityType ) {
+        self.init()
+        self.id = UUID().uuidString
+        self.title = title
+        self.subTitle = subTitle
+        self.activityType = activityType.rawValue
+    }
     override static func primaryKey() -> String? {
         return "id"
     }

@@ -11,7 +11,6 @@ import UIKit
 extension UIButton {
     func createFloatingActionButton(){
         layer.cornerRadius = frame.width / 2
-        backgroundColor = .red
         layer.shadowOpacity = 0.25
         layer.shadowRadius = 4
         layer.shadowOffset = CGSize(width: 0, height: 8)

@@ -21,7 +21,6 @@ extension  UITextField {
         imvInvalid.image = UIImage(named: "invalid")?.withRenderingMode(.alwaysTemplate)
         imvInvalid.tintColor = UIColor(red: 237/255, green: 136/255, blue: 46/255, alpha: 1)
         imvInvalid.contentMode = .scaleAspectFit
-        
     
         rightView = imvInvalid
         rightViewMode = .always

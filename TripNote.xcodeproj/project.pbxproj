@@ -11,6 +11,27 @@
 		23408DB8227949B900B2DF17 /* ActivitiesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23408DB7227949B900B2DF17 /* ActivitiesViewController.storyboard */; };
 		23408DBA227949FA00B2DF17 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23408DB9227949FA00B2DF17 /* ActivitiesViewController.swift */; };
 		23408DBD2279579600B2DF17 /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23408DBC2279579600B2DF17 /* DayModel.swift */; };
+		2348630D227DE6DB007420D4 /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2348630B227DE6DB007420D4 /* ActivityTableViewCell.swift */; };
+		2348630E227DE6DB007420D4 /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2348630C227DE6DB007420D4 /* ActivityTableViewCell.xib */; };
+		23486322227DF923007420D4 /* Raleway-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23486310227DF922007420D4 /* Raleway-Italic.ttf */; };
+		23486323227DF923007420D4 /* Raleway-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23486311227DF922007420D4 /* Raleway-ExtraLightItalic.ttf */; };
+		23486324227DF923007420D4 /* Raleway-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23486312227DF922007420D4 /* Raleway-BlackItalic.ttf */; };
+		23486325227DF923007420D4 /* Raleway-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23486313227DF922007420D4 /* Raleway-ThinItalic.ttf */; };
+		23486326227DF923007420D4 /* Raleway-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23486314227DF922007420D4 /* Raleway-MediumItalic.ttf */; };
+		23486327227DF923007420D4 /* Raleway-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23486315227DF922007420D4 /* Raleway-Thin.ttf */; };
+		23486328227DF923007420D4 /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23486316227DF922007420D4 /* Raleway-Regular.ttf */; };
+		23486329227DF923007420D4 /* Raleway-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23486317227DF922007420D4 /* Raleway-ExtraBoldItalic.ttf */; };
+		2348632A227DF923007420D4 /* Raleway-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23486318227DF922007420D4 /* Raleway-ExtraLight.ttf */; };
+		2348632B227DF923007420D4 /* Raleway-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23486319227DF923007420D4 /* Raleway-Light.ttf */; };
+		2348632C227DF923007420D4 /* Raleway-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2348631A227DF923007420D4 /* Raleway-BoldItalic.ttf */; };
+		2348632D227DF923007420D4 /* Raleway-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2348631B227DF923007420D4 /* Raleway-ExtraBold.ttf */; };
+		2348632E227DF923007420D4 /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2348631C227DF923007420D4 /* Raleway-SemiBold.ttf */; };
+		2348632F227DF923007420D4 /* Raleway-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2348631D227DF923007420D4 /* Raleway-SemiBoldItalic.ttf */; };
+		23486330227DF923007420D4 /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2348631E227DF923007420D4 /* Raleway-Bold.ttf */; };
+		23486331227DF923007420D4 /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2348631F227DF923007420D4 /* Raleway-Medium.ttf */; };
+		23486332227DF923007420D4 /* Raleway-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23486320227DF923007420D4 /* Raleway-Black.ttf */; };
+		23486333227DF923007420D4 /* Raleway-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23486321227DF923007420D4 /* Raleway-LightItalic.ttf */; };
+		23486335227DF935007420D4 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23486334227DF935007420D4 /* Colors.xcassets */; };
 		235BFE10227CA76600DD6658 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235BFE0E227CA76600DD6658 /* HeaderView.swift */; };
 		235BFE11227CA76600DD6658 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 235BFE0F227CA76600DD6658 /* HeaderView.xib */; };
 		239D032B226DABD90025BD7A /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239D032A226DABD90025BD7A /* UIButtonExtension.swift */; };
@@ -19,10 +40,6 @@
 		239D0334226DB7670025BD7A /* AddTripViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 239D0333226DB7670025BD7A /* AddTripViewController.storyboard */; };
 		239D0336226DB7880025BD7A /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239D0335226DB7880025BD7A /* AddTripViewController.swift */; };
 		23A9F3B62269AA0C0067D1BA /* TripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A9F3B52269AA0C0067D1BA /* TripTableViewCell.swift */; };
-		23A9F3B92269B23A0067D1BA /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A9F3B82269B23A0067D1BA /* Theme.swift */; };
-		23A9F3BD2269C4B70067D1BA /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23A9F3BC2269C4B70067D1BA /* Quicksand-Medium.ttf */; };
-		23A9F3BF2269C4D30067D1BA /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23A9F3BE2269C4D30067D1BA /* Quicksand-Bold.ttf */; };
-		23A9F3C12269C6CC0067D1BA /* fugaz-one.regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23A9F3C02269C6CC0067D1BA /* fugaz-one.regular.ttf */; };
 		23C397A1226980F8001C022E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C397A0226980F8001C022E /* AppDelegate.swift */; };
 		23C397A3226980F8001C022E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C397A2226980F8001C022E /* ViewController.swift */; };
 		23C397A6226980F8001C022E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23C397A4226980F8001C022E /* Main.storyboard */; };
@@ -41,6 +58,27 @@
 		23408DB7227949B900B2DF17 /* ActivitiesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ActivitiesViewController.storyboard; sourceTree = "<group>"; };
 		23408DB9227949FA00B2DF17 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
 		23408DBC2279579600B2DF17 /* DayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayModel.swift; sourceTree = "<group>"; };
+		2348630B227DE6DB007420D4 /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
+		2348630C227DE6DB007420D4 /* ActivityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityTableViewCell.xib; sourceTree = "<group>"; };
+		23486310227DF922007420D4 /* Raleway-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Italic.ttf"; path = "../../../../../Downloads/Raleway/Raleway-Italic.ttf"; sourceTree = "<group>"; };
+		23486311227DF922007420D4 /* Raleway-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-ExtraLightItalic.ttf"; path = "../../../../../Downloads/Raleway/Raleway-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		23486312227DF922007420D4 /* Raleway-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-BlackItalic.ttf"; path = "../../../../../Downloads/Raleway/Raleway-BlackItalic.ttf"; sourceTree = "<group>"; };
+		23486313227DF922007420D4 /* Raleway-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-ThinItalic.ttf"; path = "../../../../../Downloads/Raleway/Raleway-ThinItalic.ttf"; sourceTree = "<group>"; };
+		23486314227DF922007420D4 /* Raleway-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-MediumItalic.ttf"; path = "../../../../../Downloads/Raleway/Raleway-MediumItalic.ttf"; sourceTree = "<group>"; };
+		23486315227DF922007420D4 /* Raleway-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Thin.ttf"; path = "../../../../../Downloads/Raleway/Raleway-Thin.ttf"; sourceTree = "<group>"; };
+		23486316227DF922007420D4 /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Regular.ttf"; path = "../../../../../Downloads/Raleway/Raleway-Regular.ttf"; sourceTree = "<group>"; };
+		23486317227DF922007420D4 /* Raleway-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-ExtraBoldItalic.ttf"; path = "../../../../../Downloads/Raleway/Raleway-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		23486318227DF922007420D4 /* Raleway-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-ExtraLight.ttf"; path = "../../../../../Downloads/Raleway/Raleway-ExtraLight.ttf"; sourceTree = "<group>"; };
+		23486319227DF923007420D4 /* Raleway-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Light.ttf"; path = "../../../../../Downloads/Raleway/Raleway-Light.ttf"; sourceTree = "<group>"; };
+		2348631A227DF923007420D4 /* Raleway-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-BoldItalic.ttf"; path = "../../../../../Downloads/Raleway/Raleway-BoldItalic.ttf"; sourceTree = "<group>"; };
+		2348631B227DF923007420D4 /* Raleway-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-ExtraBold.ttf"; path = "../../../../../Downloads/Raleway/Raleway-ExtraBold.ttf"; sourceTree = "<group>"; };
+		2348631C227DF923007420D4 /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-SemiBold.ttf"; path = "../../../../../Downloads/Raleway/Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
+		2348631D227DF923007420D4 /* Raleway-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-SemiBoldItalic.ttf"; path = "../../../../../Downloads/Raleway/Raleway-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		2348631E227DF923007420D4 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Bold.ttf"; path = "../../../../../Downloads/Raleway/Raleway-Bold.ttf"; sourceTree = "<group>"; };
+		2348631F227DF923007420D4 /* Raleway-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Medium.ttf"; path = "../../../../../Downloads/Raleway/Raleway-Medium.ttf"; sourceTree = "<group>"; };
+		23486320227DF923007420D4 /* Raleway-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Black.ttf"; path = "../../../../../Downloads/Raleway/Raleway-Black.ttf"; sourceTree = "<group>"; };
+		23486321227DF923007420D4 /* Raleway-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-LightItalic.ttf"; path = "../../../../../Downloads/Raleway/Raleway-LightItalic.ttf"; sourceTree = "<group>"; };
+		23486334227DF935007420D4 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		235BFE0E227CA76600DD6658 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		235BFE0F227CA76600DD6658 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		239D032A226DABD90025BD7A /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
@@ -49,10 +87,6 @@
 		239D0333226DB7670025BD7A /* AddTripViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddTripViewController.storyboard; sourceTree = "<group>"; };
 		239D0335226DB7880025BD7A /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
 		23A9F3B52269AA0C0067D1BA /* TripTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewCell.swift; sourceTree = "<group>"; };
-		23A9F3B82269B23A0067D1BA /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
-		23A9F3BC2269C4B70067D1BA /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Medium.ttf"; sourceTree = "<group>"; };
-		23A9F3BE2269C4D30067D1BA /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
-		23A9F3C02269C6CC0067D1BA /* fugaz-one.regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fugaz-one.regular.ttf"; sourceTree = "<group>"; };
 		23C3979D226980F8001C022E /* TripNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23C397A0226980F8001C022E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23C397A2226980F8001C022E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +121,8 @@
 				23408DB9227949FA00B2DF17 /* ActivitiesViewController.swift */,
 				235BFE0E227CA76600DD6658 /* HeaderView.swift */,
 				235BFE0F227CA76600DD6658 /* HeaderView.xib */,
+				2348630B227DE6DB007420D4 /* ActivityTableViewCell.swift */,
+				2348630C227DE6DB007420D4 /* ActivityTableViewCell.xib */,
 			);
 			path = ActivitiesviewController;
 			sourceTree = "<group>";
@@ -97,6 +133,31 @@
 				23408DBC2279579600B2DF17 /* DayModel.swift */,
 			);
 			path = Day;
+			sourceTree = "<group>";
+		};
+		2348630F227DF8F8007420D4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				23486320227DF923007420D4 /* Raleway-Black.ttf */,
+				23486312227DF922007420D4 /* Raleway-BlackItalic.ttf */,
+				2348631E227DF923007420D4 /* Raleway-Bold.ttf */,
+				2348631A227DF923007420D4 /* Raleway-BoldItalic.ttf */,
+				2348631B227DF923007420D4 /* Raleway-ExtraBold.ttf */,
+				23486317227DF922007420D4 /* Raleway-ExtraBoldItalic.ttf */,
+				23486318227DF922007420D4 /* Raleway-ExtraLight.ttf */,
+				23486311227DF922007420D4 /* Raleway-ExtraLightItalic.ttf */,
+				23486310227DF922007420D4 /* Raleway-Italic.ttf */,
+				23486319227DF923007420D4 /* Raleway-Light.ttf */,
+				23486321227DF923007420D4 /* Raleway-LightItalic.ttf */,
+				2348631F227DF923007420D4 /* Raleway-Medium.ttf */,
+				23486314227DF922007420D4 /* Raleway-MediumItalic.ttf */,
+				23486316227DF922007420D4 /* Raleway-Regular.ttf */,
+				2348631C227DF923007420D4 /* Raleway-SemiBold.ttf */,
+				2348631D227DF923007420D4 /* Raleway-SemiBoldItalic.ttf */,
+				23486315227DF922007420D4 /* Raleway-Thin.ttf */,
+				23486313227DF922007420D4 /* Raleway-ThinItalic.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		239D0326226DAB640025BD7A /* Extensions */ = {
@@ -137,10 +198,8 @@
 		23A9F3B72269B21F0067D1BA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				23A9F3C02269C6CC0067D1BA /* fugaz-one.regular.ttf */,
-				23A9F3BE2269C4D30067D1BA /* Quicksand-Bold.ttf */,
-				23A9F3BC2269C4B70067D1BA /* Quicksand-Medium.ttf */,
-				23A9F3B82269B23A0067D1BA /* Theme.swift */,
+				2348630F227DF8F8007420D4 /* Fonts */,
+				23486334227DF935007420D4 /* Colors.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -305,16 +364,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23A9F3BF2269C4D30067D1BA /* Quicksand-Bold.ttf in Resources */,
+				2348632C227DF923007420D4 /* Raleway-BoldItalic.ttf in Resources */,
+				23486331227DF923007420D4 /* Raleway-Medium.ttf in Resources */,
+				2348632A227DF923007420D4 /* Raleway-ExtraLight.ttf in Resources */,
+				23486323227DF923007420D4 /* Raleway-ExtraLightItalic.ttf in Resources */,
+				2348632F227DF923007420D4 /* Raleway-SemiBoldItalic.ttf in Resources */,
+				23486328227DF923007420D4 /* Raleway-Regular.ttf in Resources */,
 				235BFE11227CA76600DD6658 /* HeaderView.xib in Resources */,
+				23486322227DF923007420D4 /* Raleway-Italic.ttf in Resources */,
+				2348632E227DF923007420D4 /* Raleway-SemiBold.ttf in Resources */,
+				23486329227DF923007420D4 /* Raleway-ExtraBoldItalic.ttf in Resources */,
+				23486326227DF923007420D4 /* Raleway-MediumItalic.ttf in Resources */,
 				23C397AB226980FA001C022E /* LaunchScreen.storyboard in Resources */,
 				23C397A8226980FA001C022E /* Assets.xcassets in Resources */,
+				23486325227DF923007420D4 /* Raleway-ThinItalic.ttf in Resources */,
 				23C397BF22698A35001C022E /* TripViewController.storyboard in Resources */,
 				239D0334226DB7670025BD7A /* AddTripViewController.storyboard in Resources */,
 				23C397A6226980F8001C022E /* Main.storyboard in Resources */,
-				23A9F3BD2269C4B70067D1BA /* Quicksand-Medium.ttf in Resources */,
-				23A9F3C12269C6CC0067D1BA /* fugaz-one.regular.ttf in Resources */,
+				23486324227DF923007420D4 /* Raleway-BlackItalic.ttf in Resources */,
+				23486335227DF935007420D4 /* Colors.xcassets in Resources */,
+				2348630E227DE6DB007420D4 /* ActivityTableViewCell.xib in Resources */,
+				2348632D227DF923007420D4 /* Raleway-ExtraBold.ttf in Resources */,
+				2348632B227DF923007420D4 /* Raleway-Light.ttf in Resources */,
 				23408DB8227949B900B2DF17 /* ActivitiesViewController.storyboard in Resources */,
+				23486330227DF923007420D4 /* Raleway-Bold.ttf in Resources */,
+				23486333227DF923007420D4 /* Raleway-LightItalic.ttf in Resources */,
+				23486327227DF923007420D4 /* Raleway-Thin.ttf in Resources */,
+				23486332227DF923007420D4 /* Raleway-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +456,7 @@
 				239D032B226DABD90025BD7A /* UIButtonExtension.swift in Sources */,
 				23C397A3226980F8001C022E /* ViewController.swift in Sources */,
 				23C397C122698A4F001C022E /* TripViewController.swift in Sources */,
+				2348630D227DE6DB007420D4 /* ActivityTableViewCell.swift in Sources */,
 				23C397A1226980F8001C022E /* AppDelegate.swift in Sources */,
 				239D0331226DB2FB0025BD7A /* TripViewModel.swift in Sources */,
 				239D0336226DB7880025BD7A /* AddTripViewController.swift in Sources */,
@@ -388,7 +465,6 @@
 				239D032D226DAC8E0025BD7A /* UIViewExtension.swift in Sources */,
 				23C397B522698258001C022E /* TripModel.swift in Sources */,
 				23C7525B22796A41001393CD /* ActivityModel.swift in Sources */,
-				23A9F3B92269B23A0067D1BA /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

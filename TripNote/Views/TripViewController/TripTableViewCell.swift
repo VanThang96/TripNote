@@ -30,6 +30,7 @@ class TripTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         cardView.addShadowAndRoundedCorners()
+        cardView.makeGradientColorInCardView()
         imvTrip.layer.cornerRadius = 10
     }
 
