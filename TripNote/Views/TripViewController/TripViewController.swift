@@ -18,7 +18,7 @@ class TripViewController: UIViewController {
     @IBOutlet weak var btnCloseHelpView: UIButton!
     
     // MARK : let
-    let cellId = "cellId"
+    let cellId = String(describing: TripTableViewCell.self)
     fileprivate let  segueAddTrip = "toAddTripsegue"
     let seenHelpView = "seenHelpView"
     
@@ -123,7 +123,7 @@ extension TripViewController : UITableViewDelegate{
         let storyboard = UIStoryboard(name: "ActivitiesViewController", bundle: nil)
         let activitesViewController = storyboard.instantiateViewController(withIdentifier: "ActivitiesViewController") as! ActivitiesViewController
         activitesViewController.tripId = trip.id
-        
+        activitesViewController.tripTitle = trip.title
         navigationController?.pushViewController(activitesViewController, animated: true)
     }
 }

@@ -18,18 +18,16 @@ class ActivitiesViewController: UIViewController {
     var tripId : String!
     var tripModel : TripModel!
     var tripViewModel  : TripViewModel!
+    var tripTitle = ""
     
     // MARK : let
-    let cellId = "cellId"
-    let headerCellId = "HeaderTableView"
+    let cellId = String(describing: ActivityTableViewCell.self)
+
     
     fileprivate func setupView() {
-        navigationController?.navigationBar.topItem?.title = "Trips"
+        title = tripTitle
         
-        guard let trip = tripModel else { return }
-        title = trip.title
-        
-        guard let image = trip.image else {
+        guard let trip = tripModel,let image = trip.image else {
             return
         }
         imvBackground.image = UIImage(data: image)

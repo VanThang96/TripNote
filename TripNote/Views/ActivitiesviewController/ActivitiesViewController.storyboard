@@ -65,4 +65,5 @@
             <color red="0.8901960784313725" green="0.015686274509803921" blue="0.14509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
+    <color key="tintColor" name="Red"/>
 </document>
