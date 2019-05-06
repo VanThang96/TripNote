@@ -75,10 +75,13 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyF-UK-kDj">
-                                <rect key="frame" x="339" y="730" width="56" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyF-UK-kDj">
+                                <rect key="frame" x="338" y="718" width="56" height="56"/>
                                 <color key="backgroundColor" name="Red"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="56" id="fKZ-Sm-8xi"/>
+                                    <constraint firstAttribute="height" constant="56" id="jRw-FR-3ru"/>
+                                </constraints>
                                 <state key="normal" image="add"/>
                                 <connections>
                                     <segue destination="AtM-Kg-Kil" kind="presentation" identifier="toAddTripsegue" id="Hix-gf-qvc"/>
@@ -88,8 +91,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" name="Red"/>
                         <constraints>
+                            <constraint firstItem="mhQ-lD-B4n" firstAttribute="bottom" secondItem="nyF-UK-kDj" secondAttribute="bottom" id="7kd-An-B8Y"/>
                             <constraint firstItem="wou-Tl-5Bh" firstAttribute="bottom" secondItem="mhQ-lD-B4n" secondAttribute="bottom" id="I0f-mE-Bdj"/>
                             <constraint firstItem="wou-Tl-5Bh" firstAttribute="leading" secondItem="mhQ-lD-B4n" secondAttribute="leading" id="NNN-2M-cZN"/>
+                            <constraint firstItem="mhQ-lD-B4n" firstAttribute="trailing" secondItem="nyF-UK-kDj" secondAttribute="trailing" constant="20" id="Xqg-Zw-NMv"/>
                             <constraint firstItem="wou-Tl-5Bh" firstAttribute="trailing" secondItem="mhQ-lD-B4n" secondAttribute="trailing" id="drI-cx-yDu"/>
                             <constraint firstItem="wou-Tl-5Bh" firstAttribute="top" secondItem="mhQ-lD-B4n" secondAttribute="top" id="tuI-IH-MAF"/>
                         </constraints>
@@ -105,10 +110,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AxC-wq-Ksq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <visualEffectView opaque="NO" contentMode="scaleToFill" id="Ara-nc-YF6">
-                    <rect key="frame" x="0.0" y="0.0" width="371" height="726"/>
+                    <rect key="frame" x="0.0" y="0.0" width="371" height="616"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rx8-ei-1pA">
-                        <rect key="frame" x="0.0" y="0.0" width="371" height="726"/>
+                        <rect key="frame" x="0.0" y="0.0" width="371" height="616"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="CgI-Zw-zcZ">
@@ -135,7 +140,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTv-L5-eu7">
-                                <rect key="frame" x="16" y="642" width="339" height="44"/>
+                                <rect key="frame" x="16" y="532" width="339" height="44"/>
                                 <color key="backgroundColor" name="Red"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="UjD-Xm-9PV"/>

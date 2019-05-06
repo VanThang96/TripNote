@@ -37,7 +37,7 @@ class TripViewController: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
-        setupHelpView()
+//        setupHelpView()
     }
     // MARK : IBAction
     @IBAction func closeHelpView(_ sender: Any) {
@@ -66,7 +66,7 @@ class TripViewController: UIViewController {
         }
         if UserDefaults.standard.bool(forKey: seenHelpView) == false {
             btnCloseHelpView.layer.cornerRadius = btnCloseHelpView.frame.height / 2
-            helpView.frame = view.frame
+            helpView.frame = view.bounds
             view.addSubview(helpView)
         }
     }

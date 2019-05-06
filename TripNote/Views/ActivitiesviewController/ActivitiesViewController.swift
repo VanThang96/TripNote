@@ -13,6 +13,7 @@ class ActivitiesViewController: UIViewController {
     // MARK : IBOutlet
     @IBOutlet weak var imvBackground: UIImageView!
     @IBOutlet weak var tbViewActivities: UITableView!
+    @IBOutlet weak var btnActionSheet: UIButton!
     
     // MARK : Var
     var tripId : String!
@@ -25,6 +26,8 @@ class ActivitiesViewController: UIViewController {
 
     
     fileprivate func setupView() {
+        btnActionSheet.boderButton()
+        
         title = tripTitle
         
         guard let trip = tripModel,let image = trip.image else {
@@ -51,6 +54,22 @@ class ActivitiesViewController: UIViewController {
         setupView()
         
         setupTableView()
+    }
+    
+    // MARK : IBAction
+    @IBAction func handleActionSheet(_ sender: Any) {
+        let alertAction = UIAlertController(title: "Which would you like to add?", message: nil, preferredStyle: .actionSheet)
+        let dayAction = UIAlertAction(title: "Day", style: .default) { (action) in
+            
+        }
+        let activityAction = UIAlertAction(title: "Activity", style: .default) { (action) in
+            
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        alertAction.addAction(dayAction)
+        alertAction.addAction(activityAction)
+        alertAction.addAction(cancelAction)
+        present(alertAction, animated: true, completion: nil)
     }
 }
 extension ActivitiesViewController : UITableViewDataSource{

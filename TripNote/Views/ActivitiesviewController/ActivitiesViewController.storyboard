@@ -35,14 +35,29 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orn-Gv-wqz">
+                                <rect key="frame" x="299" y="611" width="56" height="56"/>
+                                <color key="backgroundColor" name="Red"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="56" id="FSm-Fh-z6H"/>
+                                    <constraint firstAttribute="height" constant="56" id="Rg0-5v-8FS"/>
+                                    <constraint firstAttribute="width" constant="56" id="iYV-mG-fDL"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="56" id="o90-u5-Srp"/>
+                                </constraints>
+                                <state key="normal" image="add"/>
+                                <connections>
+                                    <action selector="handleActionSheet:" destination="KXu-Ak-wup" eventType="touchUpInside" id="Knr-Oc-j0m"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" name="Red"/>
                         <constraints>
                             <constraint firstItem="483-ko-2NV" firstAttribute="leading" secondItem="knS-Ay-uIH" secondAttribute="leading" id="C2O-8a-Giv"/>
+                            <constraint firstItem="knS-Ay-uIH" firstAttribute="bottom" secondItem="orn-Gv-wqz" secondAttribute="bottom" id="Gl1-jc-UlK"/>
                             <constraint firstItem="knS-Ay-uIH" firstAttribute="trailing" secondItem="483-ko-2NV" secondAttribute="trailing" id="HY4-rx-VKq"/>
                             <constraint firstItem="knS-Ay-uIH" firstAttribute="bottom" secondItem="483-ko-2NV" secondAttribute="bottom" id="Mjs-Hi-4bv"/>
                             <constraint firstItem="knS-Ay-uIH" firstAttribute="bottom" secondItem="fEW-Dn-cg1" secondAttribute="bottom" id="bco-yg-ARY"/>
+                            <constraint firstItem="knS-Ay-uIH" firstAttribute="trailing" secondItem="orn-Gv-wqz" secondAttribute="trailing" constant="20" id="efU-6M-AAl"/>
                             <constraint firstItem="fEW-Dn-cg1" firstAttribute="top" secondItem="knS-Ay-uIH" secondAttribute="top" id="lSe-qa-srs"/>
                             <constraint firstItem="knS-Ay-uIH" firstAttribute="trailing" secondItem="fEW-Dn-cg1" secondAttribute="trailing" id="lZm-Nu-kE6"/>
                             <constraint firstItem="483-ko-2NV" firstAttribute="top" secondItem="knS-Ay-uIH" secondAttribute="top" id="rTa-VK-Rzp"/>
@@ -51,6 +66,7 @@
                         <viewLayoutGuide key="safeArea" id="knS-Ay-uIH"/>
                     </view>
                     <connections>
+                        <outlet property="btnActionSheet" destination="orn-Gv-wqz" id="Nif-Wo-UdC"/>
                         <outlet property="imvBackground" destination="483-ko-2NV" id="gLw-Cm-Rwy"/>
                         <outlet property="tbViewActivities" destination="fEW-Dn-cg1" id="y0v-Ef-Che"/>
                     </connections>
@@ -61,9 +77,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="add" width="36" height="36"/>
         <namedColor name="Red">
             <color red="0.8901960784313725" green="0.015686274509803921" blue="0.14509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
-    <color key="tintColor" name="Red"/>
+    <color key="tintColor" name="Purple_700"/>
 </document>
