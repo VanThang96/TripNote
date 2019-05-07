@@ -11,18 +11,19 @@ import Photos
 
 class AddTripViewController: UIViewController {
     
-    // MARK : IBOutlet
+    // MARK: IBOutlet
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var btnCancel: UIButton!
     @IBOutlet weak var btnSave: UIButton!
     @IBOutlet weak var txtAddTrip: UITextField!
     @IBOutlet weak var imvPhotoTrip: UIImageView!
     
-    // MARK : var
+    // MARK: var
     var doneSaving : (()->())?
     var tripViewModel : TripViewModel!
     var tripIndexToEdit : Int?
     
+    //MARK: Init
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -111,6 +112,8 @@ class AddTripViewController: UIViewController {
         }
         
     }
+    
+    //MARK: Method
     fileprivate func handleImagePickerAuthorized(){
         let myImagePickerController = UIImagePickerController()
         myImagePickerController.allowsEditing = true
@@ -125,6 +128,7 @@ class AddTripViewController: UIViewController {
         txtAddTrip.addBoderAndShadown()
     }
 }
+//MARK: Extension UITextFieldDelegate
 extension AddTripViewController:  UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == txtAddTrip {
@@ -133,6 +137,7 @@ extension AddTripViewController:  UITextFieldDelegate{
         return true
     }
 }
+//MARK: Extension UIImagePickerControllerDelegate
 extension AddTripViewController : UIImagePickerControllerDelegate , UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {

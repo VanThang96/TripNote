@@ -59,9 +59,7 @@ class ActivitiesViewController: UIViewController {
     // MARK : IBAction
     @IBAction func handleActionSheet(_ sender: Any) {
         let alertAction = UIAlertController(title: "Which would you like to add?", message: nil, preferredStyle: .actionSheet)
-        let dayAction = UIAlertAction(title: "Day", style: .default) { (action) in
-            
-        }
+        let dayAction = UIAlertAction(title: "Day", style: .default, handler: handleActionAddNewDay)
         let activityAction = UIAlertAction(title: "Activity", style: .default) { (action) in
             
         }
@@ -70,6 +68,11 @@ class ActivitiesViewController: UIViewController {
         alertAction.addAction(activityAction)
         alertAction.addAction(cancelAction)
         present(alertAction, animated: true, completion: nil)
+    }
+    func handleActionAddNewDay(action : UIAlertAction){
+        let storyboard = UIStoryboard(name: String(describing: AddDayViewController.self), bundle: nil)
+        let addDayVC = storyboard.instantiateInitialViewController()!
+        present(addDayVC, animated: true, completion: nil)
     }
 }
 extension ActivitiesViewController : UITableViewDataSource{
