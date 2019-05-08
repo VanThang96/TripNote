@@ -11,18 +11,18 @@ import SQLite3
 
 class TripViewController: UIViewController {
     
-    // MARK : IBOutlet
+    // MARK: IBOutlet
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet var helpView: UIVisualEffectView!
     @IBOutlet weak var btnCloseHelpView: UIButton!
     
-    // MARK : let
+    // MARK: let
     let cellId = String(describing: TripTableViewCell.self)
     fileprivate let  segueAddTrip = "toAddTripsegue"
     let seenHelpView = "seenHelpView"
     
-    // MARK : var
+    // MARK: var
     var tripViewModel : TripViewModel!
     var tripIndexToEdit : Int?
     
@@ -39,7 +39,7 @@ class TripViewController: UIViewController {
         
 //        setupHelpView()
     }
-    // MARK : IBAction
+    // MARK: IBAction
     @IBAction func closeHelpView(_ sender: Any) {
         UIView.animate(withDuration: 0.5, animations: {[weak self] in
             self!.helpView.alpha = 0
@@ -49,7 +49,7 @@ class TripViewController: UIViewController {
         }
     }
     
-    //MARK : Method
+    //MARK: Method
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == segueAddTrip {
             let popup = segue.destination as! AddTripViewController
@@ -71,7 +71,7 @@ class TripViewController: UIViewController {
         }
     }
 }
-// MARK : TableViewDataSource
+// MARK: TableViewDataSource
 extension TripViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tripViewModel.getCount()
@@ -83,7 +83,7 @@ extension TripViewController : UITableViewDataSource {
         return cell!
     }
 }
-// MARK : TableViewDelegate
+// MARK: TableViewDelegate
 extension TripViewController : UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200

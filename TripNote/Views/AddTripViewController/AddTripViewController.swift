@@ -42,15 +42,14 @@ class AddTripViewController: UIViewController {
         }
     }
     
-    // MARK : IBAction
+    // MARK: IBAction
     @IBAction func Cancel(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     @IBAction func Save(_ sender: Any) {
         
         // check new Trip Name valid
-        guard txtAddTrip.text != "" , let newTripName = txtAddTrip.text else {
-            txtAddTrip.addInvalidImage()
+        guard txtAddTrip.hasValue , let newTripName = txtAddTrip.text else {
             return
         }
         

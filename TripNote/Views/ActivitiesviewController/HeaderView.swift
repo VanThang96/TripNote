@@ -10,9 +10,19 @@ import UIKit
 
 class HeaderView: UITableViewCell {
     
+    //MARK: IBOulet
     @IBOutlet weak var lbTitle: UILabel!
     @IBOutlet weak var lbSubTitle: UILabel!
     
+    //MARK: var
+    var dayModel : DayModel? {
+        didSet{
+            lbTitle.text = dayModel?.title
+            lbSubTitle.text = dayModel?.subTitle
+        }
+    }
+    
+    //MARK: Init
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

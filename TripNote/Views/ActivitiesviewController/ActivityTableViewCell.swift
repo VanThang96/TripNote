@@ -9,13 +9,13 @@
 import UIKit
 
 class ActivityTableViewCell: UITableViewCell {
-    // MARK : IBOutlet
+    // MARK: IBOutlet
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var imvActivity: UIImageView!
     @IBOutlet weak var lbTitle: UILabel!
     @IBOutlet weak var lbSubTitle: UILabel!
     
-    // MARK : var
+    // MARK: var
     var activity : ActivityModel? {
         didSet{
             imvActivity.image = getActivityImageView(activityType: ActivityType(rawValue: (activity?.activityType)!)!)
@@ -23,15 +23,15 @@ class ActivityTableViewCell: UITableViewCell {
             lbSubTitle.text = activity?.subTitle
         }
     }
+    //MARK: Init
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
     }
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
     }
+    //MARK: Method
     fileprivate func setupUI(){
         cardView.addShadowAndRoundedCorners()
     }

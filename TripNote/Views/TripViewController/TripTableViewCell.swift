@@ -10,12 +10,12 @@ import UIKit
 
 class TripTableViewCell: UITableViewCell {
     
-    // MARK : IBOutlet
+    // MARK: IBOutlet
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var imvTrip: UIImageView!
     
-    // MARK : var
+    // MARK: var
     var trip : TripModel?{
         didSet{
             titleLabel.text = trip?.title
@@ -25,7 +25,7 @@ class TripTableViewCell: UITableViewCell {
         }
     }
     
-    // MARK : Method
+    // MARK: Method
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
