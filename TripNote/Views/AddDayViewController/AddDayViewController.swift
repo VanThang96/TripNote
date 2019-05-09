@@ -14,8 +14,8 @@ class AddDayViewController: UIViewController {
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var btnCancel: UIButton!
     @IBOutlet weak var btnSave: UIButton!
-    @IBOutlet weak var txtTitle: UITextField!
     @IBOutlet weak var txtDescriptions: UITextField!
+    @IBOutlet weak var datePicker: UIDatePicker!
     
     // MARK: var
     var doneSaving : (()->())?
@@ -34,16 +34,12 @@ class AddDayViewController: UIViewController {
     @IBAction func Save(_ sender: Any) {
         
         // check title and description valid
-        guard txtTitle.hasValue , let title = txtTitle.text else {
-            return
-        }
-        
         guard txtDescriptions.hasValue , let description = txtDescriptions.text else {
             return
         }
         
         // check if title and description valid then add DayModel
-        dayViewModel.addDay(day: DayModel(title: title, subTitle: description))
+        dayViewModel.addDay(day: DayModel(title: datePicker.date, subTitle: description))
         
         if let doneSaving = doneSaving {
             doneSaving()
@@ -52,10 +48,20 @@ class AddDayViewController: UIViewController {
     }
     //MARK: Method
     fileprivate func firstSetupView(){
+        txtDescriptions.delegate = self
         cardView.borderForView()
         btnSave.boderButton()
         btnCancel.boderButton()
-        txtTitle.addBoderAndShadown()
         txtDescriptions.addBoderAndShadown()
     }
 }
+extension AddDayViewController : UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+}
+

@@ -17,7 +17,7 @@ class HeaderView: UITableViewCell {
     //MARK: var
     var dayModel : DayModel? {
         didSet{
-            lbTitle.text = dayModel?.title
+            lbTitle.text = dateFormatter(date: (dayModel?.title)!)
             lbSubTitle.text = dayModel?.subTitle
         }
     }
@@ -33,5 +33,9 @@ class HeaderView: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+    fileprivate func dateFormatter(date : Date) -> String{
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        return formatter.string(from:date)
+    }
 }

@@ -11,11 +11,11 @@ import RealmSwift
 
 class DayModel : Object {
     @objc dynamic var  id : String!
-    @objc dynamic var title : String!
+    @objc dynamic var title : Date!
     @objc dynamic var subTitle : String!
     let activityModels = List<ActivityModel>()
     
-    convenience init(title : String , subTitle : String) {
+    convenience init(title : Date , subTitle : String) {
         self.init()
         self.id = UUID().uuidString
         self.title = title

@@ -26,7 +26,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PRG-ug-jbl">
-                                <rect key="frame" x="30" y="340" width="354" height="216"/>
+                                <rect key="frame" x="30" y="298" width="354" height="300"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add  Day" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVE-bm-hlC">
                                         <rect key="frame" x="15" y="8" width="324" height="36"/>
@@ -39,26 +39,23 @@
                                         <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="shadowOffset" width="1" height="1"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title or day" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vgv-Tu-c5N">
-                                        <rect key="frame" x="15" y="60" width="324" height="44"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="het-ZP-guq"/>
-                                        </constraints>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway Medium" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
-                                    </textField>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="JAO-gO-1hg">
+                                        <rect key="frame" x="16" y="52" width="322" height="128"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="579108911.24238706">
+                                            <!--2019-05-09 15:35:11 +0000-->
+                                        </date>
+                                    </datePicker>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Decriptions" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0It-Cl-3ld">
-                                        <rect key="frame" x="15" y="112" width="324" height="44"/>
+                                        <rect key="frame" x="15" y="188" width="324" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="2EL-mJ-vea"/>
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway Medium" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="G7U-iH-Tb3">
-                                        <rect key="frame" x="15" y="164" width="324" height="44"/>
+                                        <rect key="frame" x="15" y="248" width="324" height="44"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8fG-4t-GuA">
                                                 <rect key="frame" x="0.0" y="0.0" width="137" height="44"/>
@@ -91,18 +88,19 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="G7U-iH-Tb3" firstAttribute="width" secondItem="PRG-ug-jbl" secondAttribute="width" constant="-30" id="6bo-Oe-av8"/>
+                                    <constraint firstItem="JAO-gO-1hg" firstAttribute="top" secondItem="XVE-bm-hlC" secondAttribute="bottom" constant="8" id="8yW-Mo-0FT"/>
                                     <constraint firstItem="XVE-bm-hlC" firstAttribute="width" secondItem="PRG-ug-jbl" secondAttribute="width" constant="-30" id="G4h-Z0-XbG"/>
                                     <constraint firstItem="0It-Cl-3ld" firstAttribute="centerX" secondItem="PRG-ug-jbl" secondAttribute="centerX" id="Gae-HV-jI8"/>
                                     <constraint firstItem="G7U-iH-Tb3" firstAttribute="centerX" secondItem="PRG-ug-jbl" secondAttribute="centerX" id="MNn-Qg-qBL"/>
-                                    <constraint firstItem="vgv-Tu-c5N" firstAttribute="width" secondItem="PRG-ug-jbl" secondAttribute="width" constant="-30" id="Mo6-kQ-8vW"/>
+                                    <constraint firstItem="G7U-iH-Tb3" firstAttribute="top" secondItem="0It-Cl-3ld" secondAttribute="bottom" constant="16" id="PRc-pw-R3C"/>
+                                    <constraint firstItem="0It-Cl-3ld" firstAttribute="top" secondItem="JAO-gO-1hg" secondAttribute="bottom" constant="8" id="WMv-0N-q8D"/>
                                     <constraint firstAttribute="bottom" secondItem="G7U-iH-Tb3" secondAttribute="bottom" constant="8" id="YC1-TL-eKU"/>
                                     <constraint firstItem="XVE-bm-hlC" firstAttribute="top" secondItem="PRG-ug-jbl" secondAttribute="top" constant="8" id="bod-O8-AAy"/>
                                     <constraint firstItem="XVE-bm-hlC" firstAttribute="centerX" secondItem="PRG-ug-jbl" secondAttribute="centerX" id="iCP-Jp-Mn7"/>
+                                    <constraint firstAttribute="trailing" secondItem="JAO-gO-1hg" secondAttribute="trailing" constant="16" id="n9F-C2-5j6"/>
                                     <constraint firstItem="0It-Cl-3ld" firstAttribute="width" secondItem="PRG-ug-jbl" secondAttribute="width" constant="-30" id="qkB-Um-hzm"/>
-                                    <constraint firstItem="vgv-Tu-c5N" firstAttribute="top" secondItem="XVE-bm-hlC" secondAttribute="bottom" constant="16" id="sWn-17-STv"/>
-                                    <constraint firstAttribute="height" constant="216" id="uzI-jK-Z22"/>
-                                    <constraint firstItem="vgv-Tu-c5N" firstAttribute="centerX" secondItem="PRG-ug-jbl" secondAttribute="centerX" id="vfV-nd-8ke"/>
-                                    <constraint firstItem="0It-Cl-3ld" firstAttribute="top" secondItem="vgv-Tu-c5N" secondAttribute="bottom" constant="8" id="ygC-x3-mdN"/>
+                                    <constraint firstAttribute="height" constant="300" id="uzI-jK-Z22"/>
+                                    <constraint firstItem="JAO-gO-1hg" firstAttribute="leading" secondItem="PRG-ug-jbl" secondAttribute="leading" constant="16" id="yTj-h9-Ds7"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -118,13 +116,13 @@
                         <outlet property="btnCancel" destination="8fG-4t-GuA" id="8JP-fs-3T2"/>
                         <outlet property="btnSave" destination="7Qm-Zt-oWt" id="pIa-g6-eWT"/>
                         <outlet property="cardView" destination="PRG-ug-jbl" id="TPr-4e-yW4"/>
+                        <outlet property="datePicker" destination="JAO-gO-1hg" id="ULa-nf-0G9"/>
                         <outlet property="txtDescriptions" destination="0It-Cl-3ld" id="R8o-eV-vJ7"/>
-                        <outlet property="txtTitle" destination="vgv-Tu-c5N" id="gop-yw-gVs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Xg-mf-f77" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-420" y="-86"/>
+            <point key="canvasLocation" x="-809" y="-192"/>
         </scene>
     </scenes>
 </document>
