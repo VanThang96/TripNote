@@ -44,6 +44,8 @@
 		239D0334226DB7670025BD7A /* AddTripViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 239D0333226DB7670025BD7A /* AddTripViewController.storyboard */; };
 		239D0336226DB7880025BD7A /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239D0335226DB7880025BD7A /* AddTripViewController.swift */; };
 		23A9F3B62269AA0C0067D1BA /* TripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A9F3B52269AA0C0067D1BA /* TripTableViewCell.swift */; };
+		23B444972288646E00912023 /* AddActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B444962288646E00912023 /* AddActivityViewController.swift */; };
+		23B444992288648600912023 /* AddActivityViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23B444982288648600912023 /* AddActivityViewController.storyboard */; };
 		23C397A1226980F8001C022E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C397A0226980F8001C022E /* AppDelegate.swift */; };
 		23C397A6226980F8001C022E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23C397A4226980F8001C022E /* Main.storyboard */; };
 		23C397A8226980FA001C022E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23C397A7226980FA001C022E /* Assets.xcassets */; };
@@ -95,6 +97,8 @@
 		239D0333226DB7670025BD7A /* AddTripViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddTripViewController.storyboard; sourceTree = "<group>"; };
 		239D0335226DB7880025BD7A /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
 		23A9F3B52269AA0C0067D1BA /* TripTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewCell.swift; sourceTree = "<group>"; };
+		23B444962288646E00912023 /* AddActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityViewController.swift; sourceTree = "<group>"; };
+		23B444982288648600912023 /* AddActivityViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddActivityViewController.storyboard; sourceTree = "<group>"; };
 		23C3979D226980F8001C022E /* TripNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23C397A0226980F8001C022E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23C397A5226980F8001C022E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -232,6 +236,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		23B444952288643800912023 /* AddActivityViewController */ = {
+			isa = PBXGroup;
+			children = (
+				23B444962288646E00912023 /* AddActivityViewController.swift */,
+				23B444982288648600912023 /* AddActivityViewController.storyboard */,
+			);
+			path = AddActivityViewController;
+			sourceTree = "<group>";
+		};
 		23C39794226980F8001C022E = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +301,7 @@
 		23C397B822698951001C022E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				23B444952288643800912023 /* AddActivityViewController */,
 				234E253F2281DBD0009A91EC /* AddDayViewController */,
 				23408DB62279497A00B2DF17 /* ActivitiesviewController */,
 				239D0332226DB5EF0025BD7A /* AddTripViewController */,
@@ -399,6 +413,7 @@
 				234E25602281E94C009A91EC /* Raleway-BlackItalic.ttf in Resources */,
 				235BFE11227CA76600DD6658 /* HeaderView.xib in Resources */,
 				234E255B2281E94C009A91EC /* Raleway-LightItalic.ttf in Resources */,
+				23B444992288648600912023 /* AddActivityViewController.storyboard in Resources */,
 				234E25632281E94C009A91EC /* Raleway-ThinItalic.ttf in Resources */,
 				234E255C2281E94C009A91EC /* Raleway-Thin.ttf in Resources */,
 				234E25592281E94C009A91EC /* Raleway-BoldItalic.ttf in Resources */,
@@ -480,6 +495,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				234E25432281DC36009A91EC /* AddDayViewController.swift in Sources */,
+				23B444972288646E00912023 /* AddActivityViewController.swift in Sources */,
 				23A9F3B62269AA0C0067D1BA /* TripTableViewCell.swift in Sources */,
 				23408DBA227949FA00B2DF17 /* ActivitiesViewController.swift in Sources */,
 				230C15362270B81700380009 /* UITextFieldExtension.swift in Sources */,

@@ -31,23 +31,30 @@ class ActivitiesViewController: UIViewController {
         
         getTripModel()
         setupView()
-        
+            
         setupTableView()
     }
     // MARK: IBAction
     @IBAction func handleActionSheet(_ sender: Any) {
         let alertAction = UIAlertController(title: "Which would you like to add?", message: nil, preferredStyle: .actionSheet)
         let dayAction = UIAlertAction(title: "Day", style: .default, handler: handleActionAddNewDay)
-        let activityAction = UIAlertAction(title: "Activity", style: .default) { (action) in
-            
-        }
+        let activityAction = UIAlertAction(title: "Activity", style: .default, handler:handleActionAddNewActivity)
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        if dayViewModel.getCount() == 0 {
+            activityAction.isEnabled = false
+        }
         alertAction.addAction(dayAction)
         alertAction.addAction(activityAction)
         alertAction.addAction(cancelAction)
         present(alertAction, animated: true, completion: nil)
     }
     //MARK: Method
+    func handleActionAddNewActivity(action: UIAlertAction){
+        let storyboard = UIStoryboard(name: String(describing: AddActivityViewController.self), bundle: nil)
+        let addActivityVC = storyboard.instantiateInitialViewController()! as! AddActivityViewController
+        present(addActivityVC, animated: true, completion: nil)
+    }
     func handleActionAddNewDay(action : UIAlertAction){
         let storyboard = UIStoryboard(name: String(describing: AddDayViewController.self), bundle: nil)
         let addDayVC = storyboard.instantiateInitialViewController()! as! AddDayViewController

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iO7-Gu-5wo">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Raleway-Medium.ttf">
+            <string>Raleway-Medium</string>
+        </array>
+        <array key="Raleway-SemiBold.ttf">
+            <string>Raleway-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Add Activity View Controller-->
+        <scene sceneID="29z-b1-878">
+            <objects>
+                <viewController storyboardIdentifier="AddActivityViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="iO7-Gu-5wo" customClass="AddActivityViewController" customModule="TripNote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nq5-uV-JEF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xrW-oI-i69">
+                                <rect key="frame" x="30" y="231" width="315" height="350"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add  Activity" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPz-Xt-Mvr">
+                                        <rect key="frame" x="16" y="8" width="283" height="36.333333333333336"/>
+                                        <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway SemiBold" pointSize="30"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="shadowOffset" width="1" height="1"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ycC-l7-V8i">
+                                        <rect key="frame" x="16" y="66" width="283" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="9QL-NQ-Ecy"/>
+                                        </constraints>
+                                    </pickerView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="what are you doing? " minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4k5-wS-PGa" userLabel="what are you doing?">
+                                        <rect key="frame" x="16" y="194" width="283" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="ZZ8-9r-N4I"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway Medium" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Decriptions" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mIc-aW-bf7">
+                                        <rect key="frame" x="16" y="246" width="283" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="WnZ-53-W62"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway Medium" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="gMJ-TC-kAM">
+                                        <rect key="frame" x="16" y="298" width="283" height="44"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cab-pE-Bbj">
+                                                <rect key="frame" x="0.0" y="0.0" width="116.66666666666667" height="44"/>
+                                                <color key="backgroundColor" red="0.74901960779999999" green="0.015686274510000001" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway Medium" pointSize="17"/>
+                                                <state key="normal" title="Cancel">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="handleCancelPopup:" destination="iO7-Gu-5wo" eventType="touchUpInside" id="yWN-2U-f5Q"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vvd-cs-Aon">
+                                                <rect key="frame" x="166.66666666666666" y="0.0" width="116.33333333333334" height="44"/>
+                                                <color key="backgroundColor" red="0.30588235289999999" green="0.73725490199999999" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway Medium" pointSize="17"/>
+                                                <state key="normal" title="Save">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="handleSavePopup:" destination="iO7-Gu-5wo" eventType="touchUpInside" id="ijy-CH-BUh"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="Ppq-uy-6sD"/>
+                                            <constraint firstAttribute="height" constant="44" id="QTr-Rb-hW2"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="4k5-wS-PGa" firstAttribute="top" secondItem="ycC-l7-V8i" secondAttribute="bottom" constant="8" id="96u-QE-xRM"/>
+                                    <constraint firstItem="mIc-aW-bf7" firstAttribute="top" secondItem="4k5-wS-PGa" secondAttribute="bottom" constant="8" id="9rp-vA-AZj"/>
+                                    <constraint firstItem="4k5-wS-PGa" firstAttribute="leading" secondItem="xrW-oI-i69" secondAttribute="leading" constant="16" id="B6l-BE-2Xo"/>
+                                    <constraint firstItem="hPz-Xt-Mvr" firstAttribute="leading" secondItem="xrW-oI-i69" secondAttribute="leading" constant="16" id="B7f-9G-FrU"/>
+                                    <constraint firstItem="gMJ-TC-kAM" firstAttribute="leading" secondItem="xrW-oI-i69" secondAttribute="leading" constant="16" id="DGW-af-kzI"/>
+                                    <constraint firstItem="gMJ-TC-kAM" firstAttribute="top" secondItem="mIc-aW-bf7" secondAttribute="bottom" constant="8" id="GHP-6t-11K"/>
+                                    <constraint firstAttribute="height" constant="350" id="H0c-Xk-day"/>
+                                    <constraint firstItem="hPz-Xt-Mvr" firstAttribute="centerX" secondItem="xrW-oI-i69" secondAttribute="centerX" id="O9a-b0-hGY"/>
+                                    <constraint firstAttribute="trailing" secondItem="4k5-wS-PGa" secondAttribute="trailing" constant="16" id="QnW-Rd-uf5"/>
+                                    <constraint firstItem="ycC-l7-V8i" firstAttribute="leading" secondItem="xrW-oI-i69" secondAttribute="leading" constant="16" id="RVh-cs-NKK"/>
+                                    <constraint firstItem="hPz-Xt-Mvr" firstAttribute="top" secondItem="xrW-oI-i69" secondAttribute="top" constant="8" id="VMZ-Ph-Q6r"/>
+                                    <constraint firstAttribute="trailing" secondItem="gMJ-TC-kAM" secondAttribute="trailing" constant="16" id="X1F-t6-Dms"/>
+                                    <constraint firstItem="mIc-aW-bf7" firstAttribute="leading" secondItem="xrW-oI-i69" secondAttribute="leading" constant="16" id="a1A-bS-OCH"/>
+                                    <constraint firstAttribute="trailing" secondItem="mIc-aW-bf7" secondAttribute="trailing" constant="16" id="h32-ch-RLe"/>
+                                    <constraint firstAttribute="trailing" secondItem="ycC-l7-V8i" secondAttribute="trailing" constant="16" id="kvZ-sP-9gY"/>
+                                    <constraint firstItem="gMJ-TC-kAM" firstAttribute="bottom" secondItem="xrW-oI-i69" secondAttribute="bottomMargin" id="xge-51-xll"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.4763484589041096" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xrW-oI-i69" firstAttribute="centerY" secondItem="Nq5-uV-JEF" secondAttribute="centerY" id="5e3-1G-kpR"/>
+                            <constraint firstItem="xrW-oI-i69" firstAttribute="width" secondItem="Nqa-Se-GQw" secondAttribute="width" constant="-60" id="vG4-ti-Zfh"/>
+                            <constraint firstItem="xrW-oI-i69" firstAttribute="centerX" secondItem="Nq5-uV-JEF" secondAttribute="centerX" id="vUS-qm-gEZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Nqa-Se-GQw"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnCancel" destination="Cab-pE-Bbj" id="etD-gv-rUu"/>
+                        <outlet property="btnSave" destination="Vvd-cs-Aon" id="44H-Z7-jlr"/>
+                        <outlet property="cardView" destination="xrW-oI-i69" id="ojd-Xa-KaG"/>
+                        <outlet property="pickerView" destination="ycC-l7-V8i" id="q7F-A0-oB9"/>
+                        <outlet property="txtDescriptions" destination="mIc-aW-bf7" id="vB5-ao-wZX"/>
+                        <outlet property="txtWhatAreYouDoing" destination="4k5-wS-PGa" id="tAw-jB-XSD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pT0-ni-toF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-82.400000000000006" y="151.57421289355324"/>
+        </scene>
+    </scenes>
+</document>
