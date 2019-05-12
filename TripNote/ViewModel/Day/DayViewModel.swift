@@ -11,16 +11,17 @@ import RealmSwift
 
 class DayViewModel {
     var realm = try! Realm()
-    lazy var days : Results<DayModel> = { [weak self] in
-        self!.realm.objects(DayModel.self)
-        }()
+    lazy var days : [DayModel] = { [weak self] in
+//        self!.realm.objects(DayModel.self).sorted(by: { $0.title < $1.title })
+        self!.realm.objects(DayModel.self).sorted(by: < )
+    }()
     func addDay(day : DayModel){
         try! realm.write {
             realm.add(day, update: false)
         }
     }
     func getDays() -> [DayModel] {
-        return days.map{$0}
+        return days
     }
     func getDay(atIndex : Int) -> DayModel {
         return days[atIndex]

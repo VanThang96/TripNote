@@ -52,6 +52,7 @@
 		23C397BF22698A35001C022E /* TripViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23C397BE22698A35001C022E /* TripViewController.storyboard */; };
 		23C397C122698A4F001C022E /* TripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C397C022698A4F001C022E /* TripViewController.swift */; };
 		23C7525B22796A41001393CD /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C7525A22796A41001393CD /* ActivityModel.swift */; };
+		23D902342287F34E0065E7D1 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D902332287F34E0065E7D1 /* DateExtension.swift */; };
 		66905D4E6699716F2780E6E9 /* Pods_TripNote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8AE27883216DD8E0E7BE0D /* Pods_TripNote.framework */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +105,7 @@
 		23C397BE22698A35001C022E /* TripViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TripViewController.storyboard; sourceTree = "<group>"; };
 		23C397C022698A4F001C022E /* TripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewController.swift; sourceTree = "<group>"; };
 		23C7525A22796A41001393CD /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
+		23D902332287F34E0065E7D1 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		5D8AE27883216DD8E0E7BE0D /* Pods_TripNote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TripNote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F46A6540EF3E886F2B8C5A /* Pods-TripNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripNote.debug.xcconfig"; path = "Target Support Files/Pods-TripNote/Pods-TripNote.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -189,6 +191,7 @@
 				239D032A226DABD90025BD7A /* UIButtonExtension.swift */,
 				239D032C226DAC8E0025BD7A /* UIViewExtension.swift */,
 				230C15352270B81700380009 /* UITextFieldExtension.swift */,
+				23D902332287F34E0065E7D1 /* DateExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 				230A420B228333C600CD4A05 /* DayViewModel.swift in Sources */,
 				239D0336226DB7880025BD7A /* AddTripViewController.swift in Sources */,
 				23408DBD2279579600B2DF17 /* DayModel.swift in Sources */,
+				23D902342287F34E0065E7D1 /* DateExtension.swift in Sources */,
 				235BFE10227CA76600DD6658 /* HeaderView.swift in Sources */,
 				239D032D226DAC8E0025BD7A /* UIViewExtension.swift in Sources */,
 				23C397B522698258001C022E /* TripModel.swift in Sources */,
