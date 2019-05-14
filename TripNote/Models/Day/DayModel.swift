@@ -13,13 +13,14 @@ class DayModel : Object {
     @objc dynamic var  id : String!
     @objc dynamic var title : Date!
     @objc dynamic var subTitle : String!
-    let activityModels = List<ActivityModel>()
+    @objc dynamic var tripId : String!
     
-    convenience init(title : Date , subTitle : String) {
+    convenience init(title : Date , subTitle : String, tripId : String) {
         self.init()
         self.id = UUID().uuidString
         self.title = title
         self.subTitle = subTitle
+        self.tripId = tripId
     }
     override static func primaryKey() -> String? {
         return "id"

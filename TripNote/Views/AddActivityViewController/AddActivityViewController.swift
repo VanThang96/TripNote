@@ -17,6 +17,7 @@ class AddActivityViewController: UIViewController {
     @IBOutlet weak var btnSave: UIButton!
     
     var dayViewModel = DayViewModel()
+    var tripId : String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,13 +45,13 @@ class AddActivityViewController: UIViewController {
 }
 extension AddActivityViewController :UIPickerViewDelegate , UIPickerViewDataSource{
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return dayViewModel.getCount()
+        return dayViewModel.getCount(tripId: tripId)
     }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return dayViewModel.getDay(atIndex: row).title.mediumDate()
+        return dayViewModel.getDay(tripId: tripId, atIndex: row).title.mediumDate()
     }
 }
 extension AddActivityViewController : UITextFieldDelegate {

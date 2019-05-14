@@ -14,7 +14,6 @@ class TripModel : Object {
     @objc dynamic var id : String!
     @objc dynamic var title : String!
     @objc dynamic var image : Data!
-    let dayModels  = List<DayModel>()
     
     convenience init(title : String , image : UIImage) {
         self.init()

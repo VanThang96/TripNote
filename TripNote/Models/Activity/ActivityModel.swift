@@ -23,21 +23,24 @@ class ActivityModel : Object {
     @objc dynamic var subTitle : String!
     @objc dynamic var activityType : String!
     @objc dynamic var photo : Data!
+    @objc dynamic var dayId : String!
     
-    convenience init(title : String , subTitle : String , activityType : ActivityType , photo : UIImage) {
+    convenience init(title : String , subTitle : String , activityType : ActivityType , photo : UIImage , dayId : String) {
         self.init()
         self.id = UUID().uuidString
         self.title = title
         self.subTitle = subTitle
         self.activityType = activityType.rawValue
         self.photo = convertImagetoData(withImage : photo)
+        self.dayId = dayId
     }
-    convenience init(title : String , subTitle : String , activityType : ActivityType ) {
+    convenience init(title : String , subTitle : String , activityType : ActivityType, dayId : String ) {
         self.init()
         self.id = UUID().uuidString
         self.title = title
         self.subTitle = subTitle
         self.activityType = activityType.rawValue
+        self.dayId = dayId
     }
     override static func primaryKey() -> String? {
         return "id"

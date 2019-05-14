@@ -20,14 +20,14 @@ class DayViewModel {
             realm.add(day, update: false)
         }
     }
-    func getDays() -> [DayModel] {
-        return days
+    func getDays(tripId : String) -> [DayModel] {
+        return days.filter{$0.tripId == tripId}
     }
-    func getDay(atIndex : Int) -> DayModel {
-        return days[atIndex]
+    func getDay(tripId : String ,atIndex : Int) -> DayModel {
+        return days.filter{$0.tripId == tripId}[atIndex]
     }
-    func getCount() -> Int {
-        return days.count
+    func getCount(tripId : String) -> Int {
+        return days.filter{$0.tripId == tripId}.count
     }
     func deleteDay(dayModel : DayModel){
         try! realm.write {
@@ -38,6 +38,13 @@ class DayViewModel {
         try! realm.write {
             realm.add(dayModel, update: true)
         }
+    }
+    func checkDayAlready(tripId : String , date : Date) -> Bool{
+        let day = days.filter{$0.tripId == tripId}.contains(where: {$0.title.mediumDate() == date.mediumDate()})
+        if day {
+            return true
+        }
+        return false
     }
     func getDayWithId(with Id : String) -> DayModel?{
         return self.realm.objects(DayModel.self).first(where : { $0.id == Id})
