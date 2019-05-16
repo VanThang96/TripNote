@@ -6,6 +6,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -26,7 +27,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xrW-oI-i69">
-                                <rect key="frame" x="30" y="231" width="315" height="350"/>
+                                <rect key="frame" x="30" y="206" width="315" height="400"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add  Activity" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPz-Xt-Mvr">
                                         <rect key="frame" x="16" y="8" width="283" height="36.333333333333336"/>
@@ -36,14 +37,8 @@
                                         <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="shadowOffset" width="1" height="1"/>
                                     </label>
-                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ycC-l7-V8i">
-                                        <rect key="frame" x="16" y="66" width="283" height="120"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="120" id="9QL-NQ-Ecy"/>
-                                        </constraints>
-                                    </pickerView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="what are you doing? " minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4k5-wS-PGa" userLabel="what are you doing?">
-                                        <rect key="frame" x="16" y="194" width="283" height="44"/>
+                                        <rect key="frame" x="16" y="244" width="283" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="ZZ8-9r-N4I"/>
                                         </constraints>
@@ -52,7 +47,7 @@
                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Decriptions" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mIc-aW-bf7">
-                                        <rect key="frame" x="16" y="246" width="283" height="44"/>
+                                        <rect key="frame" x="16" y="296" width="283" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="WnZ-53-W62"/>
                                         </constraints>
@@ -61,7 +56,7 @@
                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="gMJ-TC-kAM">
-                                        <rect key="frame" x="16" y="298" width="283" height="44"/>
+                                        <rect key="frame" x="16" y="348" width="283" height="44"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cab-pE-Bbj">
                                                 <rect key="frame" x="0.0" y="0.0" width="116.66666666666667" height="44"/>
@@ -91,24 +86,103 @@
                                             <constraint firstAttribute="height" constant="44" id="QTr-Rb-hW2"/>
                                         </constraints>
                                     </stackView>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ycC-l7-V8i">
+                                        <rect key="frame" x="16" y="72" width="283" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="9QL-NQ-Ecy"/>
+                                        </constraints>
+                                    </pickerView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rho-j4-3aB">
+                                        <rect key="frame" x="16" y="200" width="283" height="36"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9F-hG-DfI">
+                                                <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="36" id="7Cp-7a-Jr3"/>
+                                                    <constraint firstAttribute="height" constant="36" id="Wnq-xr-9m3"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="car"/>
+                                                <connections>
+                                                    <action selector="handleActivityPicker:" destination="iO7-Gu-5wo" eventType="touchUpInside" id="QLa-bo-KLU"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3VG-mj-3nE">
+                                                <rect key="frame" x="61.666666666666671" y="0.0" width="36" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="36" id="CG8-Sc-FaK"/>
+                                                    <constraint firstAttribute="width" constant="36" id="X5f-bh-1E4"/>
+                                                </constraints>
+                                                <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" image="compass"/>
+                                                <connections>
+                                                    <action selector="handleActivityPicker:" destination="iO7-Gu-5wo" eventType="touchUpInside" id="FuY-mN-q5w"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xRp-6k-qF1">
+                                                <rect key="frame" x="123.66666666666666" y="0.0" width="36" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="36" id="fex-cj-MgE"/>
+                                                    <constraint firstAttribute="width" constant="36" id="iAx-vB-1qr"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="plane"/>
+                                                <connections>
+                                                    <action selector="handleActivityPicker:" destination="iO7-Gu-5wo" eventType="touchUpInside" id="3Ny-yh-GbE"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8S-HQ-oai">
+                                                <rect key="frame" x="185.33333333333334" y="0.0" width="36" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="36" id="fgm-m0-aH6"/>
+                                                    <constraint firstAttribute="height" constant="36" id="gYn-17-DAJ"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="food"/>
+                                                <connections>
+                                                    <action selector="handleActivityPicker:" destination="iO7-Gu-5wo" eventType="touchUpInside" id="TEv-V7-cEg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ez-xB-C9e">
+                                                <rect key="frame" x="247" y="0.0" width="36" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="36" id="Gzb-hx-ph1"/>
+                                                    <constraint firstAttribute="width" constant="36" id="XGQ-2A-GdJ"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="home"/>
+                                                <connections>
+                                                    <action selector="handleActivityPicker:" destination="iO7-Gu-5wo" eventType="touchUpInside" id="Kgb-nJ-qY3"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="wNi-0g-vLH"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="4k5-wS-PGa" firstAttribute="top" secondItem="ycC-l7-V8i" secondAttribute="bottom" constant="8" id="96u-QE-xRM"/>
+                                    <constraint firstItem="ycC-l7-V8i" firstAttribute="leading" secondItem="xrW-oI-i69" secondAttribute="leading" constant="16" id="44c-yq-SI5"/>
+                                    <constraint firstItem="rho-j4-3aB" firstAttribute="leading" secondItem="xrW-oI-i69" secondAttribute="leading" constant="16" id="7bz-tR-Xro"/>
+                                    <constraint firstItem="rho-j4-3aB" firstAttribute="top" secondItem="ycC-l7-V8i" secondAttribute="bottom" constant="8" id="9i7-YK-N8i"/>
                                     <constraint firstItem="mIc-aW-bf7" firstAttribute="top" secondItem="4k5-wS-PGa" secondAttribute="bottom" constant="8" id="9rp-vA-AZj"/>
                                     <constraint firstItem="4k5-wS-PGa" firstAttribute="leading" secondItem="xrW-oI-i69" secondAttribute="leading" constant="16" id="B6l-BE-2Xo"/>
                                     <constraint firstItem="hPz-Xt-Mvr" firstAttribute="leading" secondItem="xrW-oI-i69" secondAttribute="leading" constant="16" id="B7f-9G-FrU"/>
                                     <constraint firstItem="gMJ-TC-kAM" firstAttribute="leading" secondItem="xrW-oI-i69" secondAttribute="leading" constant="16" id="DGW-af-kzI"/>
                                     <constraint firstItem="gMJ-TC-kAM" firstAttribute="top" secondItem="mIc-aW-bf7" secondAttribute="bottom" constant="8" id="GHP-6t-11K"/>
-                                    <constraint firstAttribute="height" constant="350" id="H0c-Xk-day"/>
+                                    <constraint firstAttribute="height" constant="400" id="H0c-Xk-day"/>
                                     <constraint firstItem="hPz-Xt-Mvr" firstAttribute="centerX" secondItem="xrW-oI-i69" secondAttribute="centerX" id="O9a-b0-hGY"/>
                                     <constraint firstAttribute="trailing" secondItem="4k5-wS-PGa" secondAttribute="trailing" constant="16" id="QnW-Rd-uf5"/>
                                     <constraint firstItem="ycC-l7-V8i" firstAttribute="leading" secondItem="xrW-oI-i69" secondAttribute="leading" constant="16" id="RVh-cs-NKK"/>
                                     <constraint firstItem="hPz-Xt-Mvr" firstAttribute="top" secondItem="xrW-oI-i69" secondAttribute="top" constant="8" id="VMZ-Ph-Q6r"/>
+                                    <constraint firstItem="4k5-wS-PGa" firstAttribute="top" secondItem="rho-j4-3aB" secondAttribute="bottom" constant="8" id="WAK-kZ-524"/>
                                     <constraint firstAttribute="trailing" secondItem="gMJ-TC-kAM" secondAttribute="trailing" constant="16" id="X1F-t6-Dms"/>
+                                    <constraint firstAttribute="trailing" secondItem="rho-j4-3aB" secondAttribute="trailing" constant="16" id="Ycr-4X-1XP"/>
                                     <constraint firstItem="mIc-aW-bf7" firstAttribute="leading" secondItem="xrW-oI-i69" secondAttribute="leading" constant="16" id="a1A-bS-OCH"/>
                                     <constraint firstAttribute="trailing" secondItem="mIc-aW-bf7" secondAttribute="trailing" constant="16" id="h32-ch-RLe"/>
                                     <constraint firstAttribute="trailing" secondItem="ycC-l7-V8i" secondAttribute="trailing" constant="16" id="kvZ-sP-9gY"/>
+                                    <constraint firstAttribute="trailing" secondItem="ycC-l7-V8i" secondAttribute="trailing" constant="16" id="r2X-GH-7lH"/>
                                     <constraint firstItem="gMJ-TC-kAM" firstAttribute="bottom" secondItem="xrW-oI-i69" secondAttribute="bottomMargin" id="xge-51-xll"/>
                                 </constraints>
                             </view>
@@ -128,11 +202,23 @@
                         <outlet property="pickerView" destination="ycC-l7-V8i" id="q7F-A0-oB9"/>
                         <outlet property="txtDescriptions" destination="mIc-aW-bf7" id="vB5-ao-wZX"/>
                         <outlet property="txtWhatAreYouDoing" destination="4k5-wS-PGa" id="tAw-jB-XSD"/>
+                        <outletCollection property="btnActivityType" destination="o9F-hG-DfI" collectionClass="NSMutableArray" id="kNB-zY-YDt"/>
+                        <outletCollection property="btnActivityType" destination="3VG-mj-3nE" collectionClass="NSMutableArray" id="0Bb-et-gDA"/>
+                        <outletCollection property="btnActivityType" destination="xRp-6k-qF1" collectionClass="NSMutableArray" id="vAr-yH-eNl"/>
+                        <outletCollection property="btnActivityType" destination="q8S-HQ-oai" collectionClass="NSMutableArray" id="W91-Mk-qO2"/>
+                        <outletCollection property="btnActivityType" destination="0Ez-xB-C9e" collectionClass="NSMutableArray" id="Sal-Ou-uNv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pT0-ni-toF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-82.400000000000006" y="151.57421289355324"/>
+            <point key="canvasLocation" x="-810" y="106"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="car" width="48" height="48"/>
+        <image name="compass" width="48" height="48"/>
+        <image name="food" width="48" height="48"/>
+        <image name="home" width="48" height="48"/>
+        <image name="plane" width="48" height="48"/>
+    </resources>
 </document>

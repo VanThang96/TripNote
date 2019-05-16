@@ -10,7 +10,6 @@ import Foundation
 import RealmSwift
 
 class TripViewModel {
-    
     var realm = try! Realm()
     lazy var trips : Results<TripModel> = { [weak self] in
         self!.realm.objects(TripModel.self)

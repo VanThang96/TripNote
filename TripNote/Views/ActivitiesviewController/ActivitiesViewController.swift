@@ -18,20 +18,21 @@ class ActivitiesViewController: UIViewController {
     // MARK : Var
     var tripId : String!
     var tripModel : TripModel!
-    var tripViewModel  = TripViewModel()
+    var tripViewModel  :  TripViewModel!
+    var dayViewModel : DayViewModel!
+    var activityViewModel : ActivityViewModel!
     var tripTitle = ""
-    var dayViewModel = DayViewModel()
+   
     
     // MARK : let
     let cellId = String(describing: ActivityTableViewCell.self)
-
+    
     //MARK: Init
     override func viewDidLoad() {
         super.viewDidLoad()
         
         getTripModel()
         setupView()
-            
         setupTableView()
     }
     // MARK: IBAction
@@ -60,11 +61,7 @@ class ActivitiesViewController: UIViewController {
         let storyboard = UIStoryboard(name: String(describing: AddDayViewController.self), bundle: nil)
         let addDayVC = storyboard.instantiateInitialViewController()! as! AddDayViewController
         addDayVC.tripId = tripId
-        addDayVC.doneSaving = { [weak self] in
-            DispatchQueue.main.async {
-                 self?.tbViewActivities.reloadData()
-            }
-        }
+        addDayVC.delegate = self 
         present(addDayVC, animated: true, completion: nil)
     }
     fileprivate func setupView() {
@@ -78,6 +75,9 @@ class ActivitiesViewController: UIViewController {
         imvBackground.image = UIImage(data: image)
     }
     fileprivate func getTripModel() {
+        tripViewModel = TripViewModel()
+        dayViewModel = DayViewModel()
+        activityViewModel = ActivityViewModel()
         tripModel = tripViewModel.getTripWithId(with: tripId)
     }
     
@@ -90,12 +90,12 @@ class ActivitiesViewController: UIViewController {
 }
 extension ActivitiesViewController : UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return activityViewModel.getCount(dayId: dayViewModel.getDay(tripId: tripId, atIndex: section).id)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath ) as! ActivityTableViewCell
-        cell.activity = ActivityModel(title: "Bali", subTitle: "Trip to bali", activityType: .flight, dayId: "aaa")
+        cell.activity = activityViewModel.getActivity(dayId: dayViewModel.getDay(tripId: tripId, atIndex: indexPath.section).id, atIndex: indexPath.row)
         return cell
     }
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -113,5 +113,13 @@ extension ActivitiesViewController : UITableViewDelegate{
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 50
+    }
+}
+extension ActivitiesViewController  : Delegate {
+    func handleReloadDataTableview(tripId: String) {
+        self.tripId = tripId
+        DispatchQueue.main.async { [weak self] in
+            self?.tbViewActivities.reloadData()
+        }
     }
 }

@@ -12,7 +12,6 @@ import RealmSwift
 class DayViewModel {
     var realm = try! Realm()
     lazy var days : [DayModel] = { [weak self] in
-//        self!.realm.objects(DayModel.self).sorted(by: { $0.title < $1.title })
         self!.realm.objects(DayModel.self).sorted(by: < )
     }()
     func addDay(day : DayModel){

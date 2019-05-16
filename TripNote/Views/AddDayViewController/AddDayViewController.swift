@@ -8,6 +8,9 @@
 
 import UIKit
 
+protocol Delegate : class {
+    func handleReloadDataTableview(tripId :String)
+}
 class AddDayViewController: UIViewController {
 
     // MARK: IBOutlet
@@ -19,8 +22,9 @@ class AddDayViewController: UIViewController {
     
     // MARK: var
     var tripId : String!
-    var doneSaving : (()->())?
-    var dayViewModel = DayViewModel()
+    var doneSaving : ((_ tripId : String)->())?
+    var dayViewModel : DayViewModel!
+    weak var delegate : Delegate!
     
     //MARK: Init
     override func viewDidLoad() {
@@ -49,13 +53,15 @@ class AddDayViewController: UIViewController {
         // check if title and description valid then add DayModel
         dayViewModel.addDay(day: DayModel(title: datePicker.date, subTitle: description, tripId: tripId))
 
-        if let doneSaving = doneSaving {
-            doneSaving()
-        }
+//        if let doneSaving = doneSaving {
+//            doneSaving(tripId)
+//        }
+        delegate.handleReloadDataTableview(tripId: tripId)
         dismiss(animated: true, completion: nil)
     }
     //MARK: Method
     fileprivate func firstSetupView(){
+        dayViewModel = DayViewModel()
         txtDescriptions.delegate = self
         cardView.borderForView()
         btnSave.boderButton()
