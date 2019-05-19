@@ -16,6 +16,7 @@ class TripViewController: UIViewController {
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet var helpView: UIVisualEffectView!
     @IBOutlet weak var btnCloseHelpView: UIButton!
+    @IBOutlet weak var imvLogo: UIImageView!
     
     // MARK: let
     let cellId = String(describing: TripTableViewCell.self)
@@ -36,7 +37,13 @@ class TripViewController: UIViewController {
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        
+        let radians = CGFloat(200 * Double.pi/180)
+        UIView.animate(withDuration: 1, delay: 0, options: [.curveEaseIn], animations: {
+            self.imvLogo.alpha = 0
+            self.imvLogo.transform = CGAffineTransform(rotationAngle:radians).scaledBy(x: 3, y: 3)
+            let yRotation = CATransform3DMakeRotation(radians, 0, radians, 0)
+            self.imvLogo.layer.transform = CATransform3DConcat(self.imvLogo.layer.transform, yRotation)
+        }, completion: nil)
 //        setupHelpView()
     }
     // MARK: IBAction

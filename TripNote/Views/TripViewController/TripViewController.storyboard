@@ -75,6 +75,12 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="ZiB-yd-Jvw">
+                                <rect key="frame" x="69" y="266" width="276" height="276"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ZiB-yd-Jvw" secondAttribute="height" multiplier="1:1" id="Kak-oa-2jj"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyF-UK-kDj">
                                 <rect key="frame" x="338" y="718" width="56" height="56"/>
                                 <color key="backgroundColor" name="Red"/>
@@ -92,10 +98,13 @@
                         <color key="tintColor" name="Red"/>
                         <constraints>
                             <constraint firstItem="mhQ-lD-B4n" firstAttribute="bottom" secondItem="nyF-UK-kDj" secondAttribute="bottom" id="7kd-An-B8Y"/>
+                            <constraint firstItem="ZiB-yd-Jvw" firstAttribute="width" secondItem="OHq-J1-csp" secondAttribute="width" multiplier="2:3" id="9Lo-wD-pHy"/>
                             <constraint firstItem="wou-Tl-5Bh" firstAttribute="bottom" secondItem="mhQ-lD-B4n" secondAttribute="bottom" id="I0f-mE-Bdj"/>
                             <constraint firstItem="wou-Tl-5Bh" firstAttribute="leading" secondItem="mhQ-lD-B4n" secondAttribute="leading" id="NNN-2M-cZN"/>
+                            <constraint firstItem="ZiB-yd-Jvw" firstAttribute="centerX" secondItem="OHq-J1-csp" secondAttribute="centerX" id="POL-zf-T60"/>
                             <constraint firstItem="mhQ-lD-B4n" firstAttribute="trailing" secondItem="nyF-UK-kDj" secondAttribute="trailing" constant="20" id="Xqg-Zw-NMv"/>
                             <constraint firstItem="wou-Tl-5Bh" firstAttribute="trailing" secondItem="mhQ-lD-B4n" secondAttribute="trailing" id="drI-cx-yDu"/>
+                            <constraint firstItem="ZiB-yd-Jvw" firstAttribute="centerY" secondItem="OHq-J1-csp" secondAttribute="centerY" id="pI7-qP-xIp"/>
                             <constraint firstItem="wou-Tl-5Bh" firstAttribute="top" secondItem="mhQ-lD-B4n" secondAttribute="top" id="tuI-IH-MAF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mhQ-lD-B4n"/>
@@ -105,6 +114,7 @@
                         <outlet property="addButton" destination="nyF-UK-kDj" id="7ip-cu-9PO"/>
                         <outlet property="btnCloseHelpView" destination="eTv-L5-eu7" id="Qvq-UQ-BfD"/>
                         <outlet property="helpView" destination="Ara-nc-YF6" id="mxI-5A-TYd"/>
+                        <outlet property="imvLogo" destination="ZiB-yd-Jvw" id="c0k-jL-zV5"/>
                         <outlet property="tableView" destination="wou-Tl-5Bh" id="VXm-UI-Gk5"/>
                     </connections>
                 </viewController>
@@ -203,6 +213,7 @@
         <image name="add" width="36" height="36"/>
         <image name="delete_feature" width="318" height="152"/>
         <image name="edit_feature" width="318" height="152"/>
+        <image name="logo" width="472.61538696289062" height="472.61538696289062"/>
         <namedColor name="Purple_700">
             <color red="0.44705882352941179" green="0.050980392156862744" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
